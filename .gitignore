@@ -1,0 +1,25 @@
+# Dossier temporaire de scraping de l'ancien site — pas besoin de le committer
+_scrape/
+
+# Dossier temporaire de traitement vidéo (source YouTube + frames d'inspection)
+_video/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (au cas où)
+node_modules/
+
+# Logs
+*.log
+
+# Local Netlify folder
+.netlify

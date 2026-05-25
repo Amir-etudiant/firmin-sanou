@@ -1,0 +1,34 @@
+{
+  "partenaires": [
+    {
+      "nom": "Mairie de Saint-Laurent du Maroni",
+      "image": "images/partenaires/logo-mairie-slm.png",
+      "lien": "https://www.saintlaurentdumaroni.fr/",
+      "description": "Mairie de Saint-Laurent du Maroni, Guyane française."
+    },
+    {
+      "nom": "Ma Copine",
+      "image": "images/partenaires/logo-ma-copine.png",
+      "lien": "https://www.facebook.com/macopinekourou/",
+      "description": "Boutique solidaire à Kourou, Guyane."
+    },
+    {
+      "nom": "Kouroubi Faso",
+      "image": "images/partenaires/logo-kouroubi.png",
+      "lien": "https://www.facebook.com/kouroubifaso/",
+      "description": "Association culturelle franco-burkinabé."
+    },
+    {
+      "nom": "Kalbass'Art Actuel",
+      "image": "images/partenaires/logo-kalbass.png",
+      "lien": "https://www.facebook.com/KalbassArt/",
+      "description": "Promotion des arts contemporains africains."
+    },
+    {
+      "nom": "CARMA",
+      "image": "images/partenaires/logo-carma.png",
+      "lien": "https://www.facebook.com/CarmaGuyane/",
+      "description": "Chercheurs d'Art en Guyane française."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "oeuvres": [
+    {
+      "titre": "La Noblesse",
+      "annee": 2010,
+      "taille": "45 cm",
+      "image": "images/oeuvres/2010-La-Noblesse-45cm.jpg",
+      "categorie": "Portrait",
+      "description": "Buste doré coiffé d'un chapeau de cérémonie, anneaux et chaîne en bronze patiné."
+    },
+    {
+      "titre": "Le Musicien",
+      "annee": 2010,
+      "taille": "60 cm",
+      "image": "images/oeuvres/2010-Le-Musicien-60cm-2.jpg",
+      "categorie": "Figure",
+      "description": "Harpe-luth africaine épurée, fileuse du ciel. La musique, dressée comme un arc."
+    },
+    {
+      "titre": "Le Berger",
+      "annee": 2010,
+      "taille": "70 cm",
+      "image": "images/oeuvres/2010-Le-Berger-70cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Le Berger",
+      "annee": 2010,
+      "taille": "50 cm",
+      "image": "images/oeuvres/2010-Le-Berger-50cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Feuille",
+      "annee": 2010,
+      "taille": "35 cm",
+      "image": "images/oeuvres/2010-La-Feuille-35-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Bracelets",
+      "annee": 2012,
+      "taille": "35 cm",
+      "image": "images/oeuvres/2012-Bracelets-35cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "L'Appel du Geste",
+      "annee": 2012,
+      "taille": "40 cm",
+      "image": "images/oeuvres/2012-LAppel-du-Geste-40-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Famille",
+      "annee": 2012,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2012-La-Famille-30-cm.jpg",
+      "categorie": "Groupe"
+    },
+    {
+      "titre": "Le Penseur",
+      "annee": 2012,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2012-Le-Penseur-30-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Marchandise",
+      "annee": 2013,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2013-La-Marchandise-30cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Réflexion",
+      "annee": 2013,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2013-La-Reflexion-30cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Inspiration",
+      "annee": 2014,
+      "taille": "40 cm",
+      "image": "images/oeuvres/2014-Inspiration-40cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Le Costume",
+      "annee": 2014,
+      "taille": "40 cm",
+      "image": "images/oeuvres/2014-Le-Costume-40cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "À Cœur Ouvert",
+      "annee": 2015,
+      "taille": "35 cm",
+      "image": "images/oeuvres/2015-A-Coeur-Ouvert-35cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Demoiselle",
+      "annee": 2015,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2015-La-Demoiselle-30-cm-1.jpg",
+      "categorie": "Portrait"
+    },
+    {
+      "titre": "Le Gardien de la Tradition",
+      "annee": 2015,
+      "taille": "45 cm",
+      "image": "images/oeuvres/2015-Le-Gardien-de-la-Tradition-45-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Le Guitariste",
+      "annee": 2015,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2015-Le-guitariste-30-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Entre Deux Mondes",
+      "annee": 2016,
+      "taille": "50 cm",
+      "image": "images/oeuvres/2016-Entre-Deux-Monde-50-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "L'Affranchi",
+      "annee": 2016,
+      "taille": "30 cm",
+      "image": "images/oeuvres/2016-LAffranchi-30cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Le Mariage",
+      "annee": 2016,
+      "taille": "35 cm",
+      "image": "images/oeuvres/2016-Le-Mariage-35-cm.jpg",
+      "categorie": "Groupe"
+    },
+    {
+      "titre": "Le Percussionniste",
+      "annee": 2016,
+      "taille": "35 cm",
+      "image": "images/oeuvres/2016-Le-Percussioniste-35-cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Le Bagnard",
+      "annee": 2017,
+      "taille": "20 cm",
+      "image": "images/oeuvres/2017-Le-Bagnard-20cm.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Les Lutteurs",
+      "annee": 2017,
+      "taille": "40 cm",
+      "image": "images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg",
+      "categorie": "Groupe"
+    },
+    {
+      "titre": "Le Bagnard",
+      "annee": 2018,
+      "taille": null,
+      "image": "images/oeuvres/Le-Bagnard-2018.jpg",
+      "categorie": "Figure",
+      "description": "Bronze noir, méditation lourde. Le poids du temps incarné."
+    },
+    {
+      "titre": "La Femme dans toute sa Splendeur",
+      "annee": 2019,
+      "taille": null,
+      "image": "images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Berger",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/Berger-_1.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Demoiselle au chapeau",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/La-Demoiselle.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Maripa et l'Amérindien",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/La-Maripa-et-LAmerindien.jpg",
+      "categorie": "Figure",
+      "description": "Œuvre inspirée par la résidence en Guyane française."
+    },
+    {
+      "titre": "Le Salut du Chef",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/le-salut-du-chef.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "La Réflexion (assise)",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/La-Reflexion.jpg",
+      "categorie": "Figure"
+    },
+    {
+      "titre": "Origines",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/Origines-3.jpg",
+      "categorie": "Portrait"
+    },
+    {
+      "titre": "Musèle / Masques",
+      "annee": 2020,
+      "taille": null,
+      "image": "images/oeuvres/Musele-Masque-1.jpg",
+      "categorie": "Masque"
+    },
+    {
+      "titre": "Mâchoiran",
+      "annee": 2021,
+      "taille": null,
+      "image": "images/oeuvres/machoiran.jpg",
+      "categorie": "Animalier"
+    },
+    {
+      "titre": "Chaussure",
+      "annee": 2021,
+      "taille": null,
+      "image": "images/oeuvres/chaussure-1.jpg",
+      "categorie": "Objet"
+    }
+  ]
+}

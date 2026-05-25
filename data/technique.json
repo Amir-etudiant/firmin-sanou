@@ -1,0 +1,28 @@
+{
+  "histoire": {
+    "titre": "Une histoire millénaire",
+    "texte": "À l'époque ancienne, après les récoltes, on sculptait pour enrichir la société d'œuvres artistiques. Le travail se faisait d'abord en argile, puis la découverte de la cire permit d'améliorer la technique. La légende raconte qu'un enfant inspira l'idée de couler le métal dans un moule. Cette pratique concerna d'abord le fer et le cuivre, avant d'évoluer vers le bronze."
+  },
+  "etapes": [
+    {
+      "numero": "01",
+      "titre": "Modelage de la cire",
+      "description": "L'artiste sculpte une maquette en cire d'abeille, traduisant l'idée en volume avec précision."
+    },
+    {
+      "numero": "02",
+      "titre": "Moule en argile",
+      "description": "La cire est enveloppée de trois couches d'argile successives, qui sècheront pour former le moule."
+    },
+    {
+      "numero": "03",
+      "titre": "Dé-cirage & fonte",
+      "description": "Une fois sec, le moule est chauffé : la cire fond et s'échappe, le bronze en fusion à 1800° vient occuper sa place exacte."
+    },
+    {
+      "numero": "04",
+      "titre": "Finitions",
+      "description": "Le moule cassé révèle la pièce. Ponçage, ciselage et patine donnent à la sculpture son visage définitif."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "parcours": [
+    {
+      "annee": "1982",
+      "titre": "Naissance",
+      "description": "Né à Bolomakoté, Bobo Dioulasso, Burkina Faso."
+    },
+    {
+      "annee": "1996",
+      "titre": "Apprentissage",
+      "description": "À 14 ans, quitte l'école pour devenir apprenti chez Kader Derme, sculpteur fondeur reconnu. Dix années d'apprentissage."
+    },
+    {
+      "annee": "2003",
+      "titre": "Style personnel",
+      "description": "Développe son propre langage artistique, inspiré de la société, de la nature, de la danse et de l'actualité."
+    },
+    {
+      "annee": "2004",
+      "titre": "Premiers monuments",
+      "description": "Collaboration à la réalisation de monuments pour la ville de Bobo Dioulasso."
+    },
+    {
+      "annee": "2005",
+      "titre": "Première exposition à l'étranger",
+      "description": "Exposition en Belgique avec l'association Fanfakids."
+    },
+    {
+      "annee": "2005 – 2008",
+      "titre": "Centre Culturel Français",
+      "description": "Expositions collectives au Centre Culturel Français de Bobo Dioulasso."
+    },
+    {
+      "annee": "2006 – 2010",
+      "titre": "SIAO Ouagadougou",
+      "description": "Participation au Salon International de l'Artisanat de Ouagadougou."
+    },
+    {
+      "annee": "2008 – 2009",
+      "titre": "Slovénie",
+      "description": "Exposition organisée par l'association Kafuli."
+    },
+    {
+      "annee": "2010",
+      "titre": "Artiste de l'année",
+      "description": "Nomination Artiste de l'Année en sculpture. Expositions à la Galerie Ouattara et à Caen."
+    },
+    {
+      "annee": "2011",
+      "titre": "Création de l'atelier",
+      "description": "Fonde son propre atelier à Bobo Dioulasso. Forme des jeunes en sculpture et fonderie."
+    },
+    {
+      "annee": "2013",
+      "titre": "Résidence au Ghana",
+      "description": "Résidence d'artiste au Ghana, ouverture vers de nouvelles influences."
+    },
+    {
+      "annee": "2013 – 2014",
+      "titre": "Lyon",
+      "description": "Exposition à Lyon avec l'association Kouroubi Faso."
+    },
+    {
+      "annee": "2016",
+      "titre": "Troisième prix de sculpture",
+      "description": "Semaine Nationale de la Culture. Exposition à la Galerie Artitude à Paris."
+    },
+    {
+      "annee": "2017",
+      "titre": "Guyane française",
+      "description": "Résidence au CIAP. Exposition « La liberté des peuples »."
+    },
+    {
+      "annee": "2018 – 2019",
+      "titre": "Multiples résidences en Guyane",
+      "description": "Ateliers patrimoine, exposition au Surinam, prix au Grand Prix des Arts de Bobo Dioulasso."
+    },
+    {
+      "annee": "2020",
+      "titre": "Ateliers continus",
+      "description": "Ateliers et expositions entre la Guyane et le Burkina Faso."
+    },
+    {
+      "annee": "2021 — 2023",
+      "titre": "Reconnaissance internationale",
+      "description": "Expositions à Bordeaux, Vallauris, Maison Louis David. Participations à La Nuit des Musées."
+    }
+  ]
+}

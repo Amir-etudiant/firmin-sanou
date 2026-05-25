@@ -1,0 +1,67 @@
+{
+  "expositions": [
+    {
+      "titre": "D'Un Monde à l'Autre",
+      "lieu": "Vallauris, France",
+      "date_affichage": "Octobre 2023",
+      "date_tri": "2023-10",
+      "image": "images/expositions/affiche_expo-firmin-d-un-monde-a-l-autre2023.jpeg",
+      "description": "Exposition rétrospective des travaux de Firmin Sanou à Vallauris, cité de la céramique et de la sculpture.",
+      "type": "Exposition personnelle"
+    },
+    {
+      "titre": "Origines — Bordeaux",
+      "lieu": "Bordeaux, France",
+      "date_affichage": "Septembre 2022",
+      "date_tri": "2022-09",
+      "image": "images/expositions/affiche-Web_expo-firmin-origines-bordeaux1-2-2.jpg",
+      "description": "Présentation des sculptures sur le thème des racines et des héritages culturels.",
+      "type": "Exposition personnelle"
+    },
+    {
+      "titre": "Maison Louis David",
+      "lieu": "France",
+      "date_affichage": "Septembre 2022",
+      "date_tri": "2022-09",
+      "image": "images/expositions/affiche-web-expo-firmin-origines.jpg",
+      "description": "Exposition dans le cadre prestigieux de la Maison Louis David.",
+      "type": "Exposition personnelle"
+    },
+    {
+      "titre": "Farafina Lili",
+      "lieu": "France",
+      "date_affichage": "Octobre 2021",
+      "date_tri": "2021-10",
+      "image": "images/expositions/Affiche-Canon-21.jpg",
+      "description": "Mise en lumière de la culture africaine à travers le bronze.",
+      "type": "Exposition collective"
+    },
+    {
+      "titre": "Origines",
+      "lieu": "France",
+      "date_affichage": "Octobre 2021",
+      "date_tri": "2021-10",
+      "image": "images/expositions/Affiche-Apero-Expo.jpg",
+      "description": "Apéro-expo célébrant les origines et le métissage des inspirations.",
+      "type": "Exposition"
+    },
+    {
+      "titre": "La Nuit des Musées",
+      "lieu": "France",
+      "date_affichage": "Janvier 2021",
+      "date_tri": "2021-01",
+      "image": "images/expositions/Affiche-expo-3-oct-2020.jpg",
+      "description": "Participation à l'événement national La Nuit des Musées.",
+      "type": "Événement"
+    },
+    {
+      "titre": "Racines Africaines",
+      "lieu": "Saint-Laurent du Maroni, Guyane",
+      "date_affichage": "Mai 2018",
+      "date_tri": "2018-05",
+      "image": "images/expositions/Racines-Africaines.jpg",
+      "description": "Vernissage à la Salle de la relégation collective, Camp de la Transportation.",
+      "type": "Exposition personnelle"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Firmin Sanou, bronze sculptures for sale</title>
+  <meta name="description" content="Buy a bronze sculpture by Firmin Sanou. Unique pieces, secure Stripe payment, worldwide shipping.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/divers/portrait.jpg">
+
+  <meta property="og:title" content="Shop — Firmin Sanou Sculptures">
+  <meta property="og:description" content="Bronze sculptures for sale, cast in lost-wax. Unique pieces.">
+  <meta property="og:image" content="images/oeuvres/2010-La-Noblesse-45cm.jpg">
+  <meta property="og:type" content="website">
+
+  <style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{line-height:1.6;font-family:var(--font-body);color:var(--text);background:var(--bg);overflow-x:hidden}
+  img{max-width:100%;display:block}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  :root{--bg:#faf7f2;--bg-elevated:#f3ede1;--bg-soft:#eae0cd;--bg-card:#ffffff;--text:#1a1612;--text-muted:#5a5046;--text-dim:#8a8275;--accent:#8b6f47;--accent-bright:#b8945e;--accent-deep:#5e4a2e;--border:rgba(26,22,18,0.1);--border-strong:rgba(26,22,18,0.18);--font-display:'Cormorant Garamond','Times New Roman',serif;--font-body:'Inter',-apple-system,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-2xl:6rem;--space-3xl:9rem;--container:1280px;--ease:cubic-bezier(0.22,1,0.36,1);--t-fast:200ms;--t-med:400ms}
+  body{font-size:16px}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
+  h1{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:300}
+  h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:300}
+  h3{font-size:clamp(1.4rem,2.5vw,1.85rem)}
+  p{color:var(--text-muted)}
+  .eyebrow{display:inline-block;font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .lead{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:300;line-height:1.5;color:var(--text);font-style:italic}
+  .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.container{padding:0 var(--space-xl)}}
+  section{padding:var(--space-2xl) 0}
+  @media(min-width:768px){section{padding:var(--space-3xl) 0}}
+
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--space-md) 0;background:rgba(250,247,242,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
+  @media(min-width:768px){.nav-inner{padding:0 var(--space-xl)}}
+  .brand{font-family:var(--font-display);font-size:1.5rem;color:var(--text);display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-weight:500}
+  .brand-sub{font-family:var(--font-body);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+  .nav-links{display:none;gap:var(--space-lg);align-items:center}
+  @media(min-width:992px){.nav-links{display:flex}}
+  .nav-link{font-size:0.85rem;font-weight:500;color:var(--text-muted);position:relative;padding:4px 0}
+  .nav-link:hover,.nav-link.active{color:var(--text)}
+  .nav-link.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--accent)}
+  .nav-cta{padding:10px 20px;border:1px solid var(--accent);color:var(--accent);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase}
+  .nav-cta:hover{background:var(--accent);color:var(--bg)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;z-index:102}
+  @media(min-width:992px){.nav-toggle{display:none}}
+  .nav-toggle span{width:26px;height:1.5px;background:var(--text);transition:transform var(--t-med) var(--ease)}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);z-index:101;transform:translateX(100%);transition:transform var(--t-med) var(--ease)}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu a{font-family:var(--font-display);font-size:2rem;color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:var(--space-xs);padding:14px 28px;font-size:0.85rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;border:1px solid transparent;transition:all var(--t-fast) var(--ease);cursor:pointer}
+  .btn-primary{background:var(--accent);color:var(--bg)}
+  .btn-primary:hover{background:var(--accent-bright);transform:translateY(-1px)}
+  .btn-outline{border-color:var(--border-strong);color:var(--text)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+  .lang-toggle{padding:7px 12px;border:1px solid var(--border-strong);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1);margin-left:8px}
+  .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+  .page-header{padding-top:calc(80px + var(--space-2xl));padding-bottom:var(--space-xl);background:var(--bg);position:relative}
+  .page-header-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.page-header-inner{padding:0 var(--space-xl)}}
+  .page-header h1{margin-bottom:var(--space-md);max-width:18ch}
+  .page-header h1 em{color:var(--accent);font-style:italic}
+  .page-header p{font-size:1.1rem;max-width:55ch}
+  .breadcrumb{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:var(--space-md)}
+
+  /* Trust banner */
+  .trust-banner{background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-md) 0}
+  .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-lg);font-size:0.85rem;color:var(--text-muted);max-width:var(--container);margin:0 auto;padding:0 var(--space-md);text-align:center}
+  .trust-item{display:flex;align-items:center;gap:8px}
+  .trust-item strong{color:var(--text);font-weight:500}
+  .trust-item .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+  /* Shop grid */
+  .shop-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg)}
+  @media(min-width:700px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1100px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
+
+  .product-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+  .product-card:hover{transform:translateY(-6px);border-color:var(--accent)}
+  .product-image{aspect-ratio:1/1;overflow:hidden;background:var(--bg-soft);position:relative}
+  .product-image img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-med) var(--ease)}
+  .product-card:hover .product-image img{transform:scale(1.04)}
+  .product-badge{position:absolute;top:14px;left:14px;padding:5px 12px;font-family:var(--font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:var(--accent);z-index:2}
+  .product-badge.sold{background:var(--text-dim);color:#fff}
+  .product-badge.unique{background:var(--text);color:var(--bg)}
+  .product-info{padding:var(--space-lg);flex-grow:1;display:flex;flex-direction:column}
+  .product-eyebrow{font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-xs);font-weight:500}
+  .product-title{font-family:var(--font-display);font-size:1.85rem;font-weight:400;font-style:italic;margin-bottom:var(--space-xs);line-height:1.05;color:var(--text)}
+  .product-meta{display:flex;flex-wrap:wrap;gap:var(--space-sm);font-size:0.85rem;color:var(--text-muted);padding:var(--space-sm) 0;margin-bottom:var(--space-md);border-bottom:1px solid var(--border)}
+  .product-meta span{display:inline-flex;align-items:center;gap:5px}
+  .product-meta span strong{color:var(--text);font-weight:500}
+  .product-desc{font-size:0.95rem;color:var(--text-muted);margin-bottom:var(--space-lg);font-style:italic;font-family:var(--font-display);font-weight:300;line-height:1.55;flex-grow:1}
+  .product-bottom{display:flex;justify-content:space-between;align-items:center;gap:var(--space-md)}
+  .product-price{font-family:var(--font-display);font-size:2rem;color:var(--accent);font-weight:500;line-height:1}
+  .product-price small{font-size:0.7rem;font-family:var(--font-body);letter-spacing:0.15em;color:var(--text-dim);text-transform:uppercase;font-weight:500;display:block;margin-top:2px}
+  .product-buy{padding:12px 20px;background:var(--accent);color:var(--bg);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background var(--t-fast) var(--ease);white-space:nowrap}
+  .product-buy:hover{background:var(--accent-bright)}
+  .product-buy.sold{background:var(--text-dim);cursor:not-allowed}
+  .product-buy.sold:hover{background:var(--text-dim)}
+
+  /* Custom order */
+  .custom-order{background:var(--bg-elevated)}
+  .custom-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xl);align-items:center}
+  @media(min-width:768px){.custom-grid{grid-template-columns:1fr 1fr;gap:var(--space-2xl)}}
+  .custom-image{aspect-ratio:4/5;overflow:hidden;position:relative}
+  .custom-image img{width:100%;height:100%;object-fit:cover}
+  .custom-text h2{margin-bottom:var(--space-md)}
+  .custom-text h2 em{color:var(--accent);font-style:italic}
+  .custom-text p{font-size:1.05rem;line-height:1.7;margin-bottom:var(--space-md)}
+  .custom-text strong{color:var(--text);font-weight:500}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;display:grid;gap:var(--space-md)}
+  .faq-item{background:var(--bg-card);border:1px solid var(--border);padding:var(--space-lg);transition:border-color var(--t-fast) var(--ease)}
+  .faq-item:hover{border-color:var(--accent)}
+  .faq-item h4{font-family:var(--font-display);font-size:1.3rem;font-style:italic;font-weight:400;margin-bottom:var(--space-xs);color:var(--text)}
+  .faq-item p{font-size:0.95rem;line-height:1.6}
+  .faq-item p strong{color:var(--text);font-weight:500}
+
+  /* Stripe note placeholder */
+  .stripe-note{max-width:760px;margin:var(--space-xl) auto 0;padding:var(--space-md) var(--space-lg);background:rgba(139,111,71,0.06);border:1px dashed var(--accent);border-radius:4px;text-align:center;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-body)}
+  .stripe-note strong{color:var(--accent);font-weight:600}
+
+  /* Footer */
+  .footer{background:var(--bg);border-top:1px solid var(--border);padding:var(--space-xl) 0 var(--space-md)}
+  .footer-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);margin-bottom:var(--space-xl)}
+  @media(min-width:768px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-xl)}}
+  .footer h5{font-size:0.7rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .footer-tagline{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);max-width:36ch;margin-top:var(--space-sm)}
+  .footer ul{display:flex;flex-direction:column;gap:var(--space-xs)}
+  .footer a{color:var(--text-muted);font-size:0.9rem}
+  .footer a:hover{color:var(--accent)}
+  .footer-bottom{padding-top:var(--space-md);border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-sm);font-size:0.8rem;color:var(--text-dim)}
+  .footer-social{display:flex;gap:10px;margin-top:var(--space-md);flex-wrap:wrap}
+  .footer-social a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-strong);color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1)}
+  .footer-social a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px}
+  .footer-credit a{color:var(--accent);border-bottom:1px solid var(--accent);transition:all 200ms cubic-bezier(0.22,1,0.36,1);padding-bottom:1px}
+  .footer-credit a:hover{color:var(--accent-bright);border-bottom-color:transparent}
+  .footer-credit a strong{font-weight:600}
+
+  /* WhatsApp float */
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.45);z-index:90;transition:transform 200ms cubic-bezier(0.22,1,0.36,1)}
+  .whatsapp-float:hover{transform:scale(1.08)}
+  .whatsapp-float svg{width:30px;height:30px}
+  .whatsapp-float::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,0.4);animation:waPulse 2.4s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(0.95);opacity:1}100%{transform:scale(1.4);opacity:0}}
+  @media(max-width:768px){.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px}.whatsapp-float svg{width:26px;height:26px}}
+
+  ::selection{background:var(--accent);color:var(--bg)}
+  .text-center{text-align:center}
+  </style>
+</head>
+<body>
+  <div style="background:var(--bg-elevated);border-bottom:1px solid var(--border);padding:8px 0;text-align:center;font-size:0.78rem;color:var(--text-muted);font-family:var(--font-body);position:fixed;top:70px;left:0;right:0;z-index:50">
+    English version · <a href="../boutique.html" style="color:var(--accent)">Voir en français</a>
+  </div>
+  <div style="height:34px"></div>
+
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="brand-name">Firmin Sanou</span><span class="brand-sub">Sculpteur · Fondeur</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="portrait.html" class="nav-link">Portrait</a>
+        <a href="oeuvres.html" class="nav-link">Works</a>
+        <a href="technique.html" class="nav-link">Lost-wax</a>
+        <a href="stages.html" class="nav-link">Workshops · Foundry</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="../boutique.html" class="lang-toggle">FR</a>
+        <a href="boutique.html" class="nav-cta">Shop</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="oeuvres.html">Works</a>
+    <a href="technique.html">Lost-wax</a>
+    <a href="stages.html">Workshops · Foundry</a>
+    <a href="contact.html">Contact</a>
+    <a href="boutique.html">Shop</a>
+    <a href="../boutique.html">FR · Français</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> · Boutique</div>
+      <span class="eyebrow">Buy a work</span>
+      <h1>Bronze, <em>unique piece</em></h1>
+      <p>Each sculpture is hand-cast using the lost-wax technique. Once sold, it disappears from the shop. Secure Stripe payment, worldwide shipping.</p>
+    </div>
+  </header>
+
+  <!-- Trust banner -->
+  <div class="trust-banner">
+    <div class="trust-row">
+      <div class="trust-item"><span class="dot"></span><span><strong>Payment</strong> secured by Stripe</span></div>
+      <div class="trust-item"><span class="dot"></span><span><strong>Shipping</strong> worldwide</span></div>
+      <div class="trust-item"><span class="dot"></span><span>Signed <strong>authenticity certificate</strong></span></div>
+      <div class="trust-item"><span class="dot"></span><span><strong>14 days</strong> to change your mind</span></div>
+    </div>
+  </div>
+
+  <!-- Sculptures à vendre -->
+  <section>
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-xl)">
+        <span class="eyebrow">Current selection</span>
+        <h2 style="max-width:22ch;margin:0 auto var(--space-md)"><em style="color:var(--accent);font-style:italic">Available</em> sculptures</h2>
+        <p style="max-width:55ch;margin:0 auto">Six pieces selected by Firmin Sanou. For other works in the gallery, contact us directly.</p>
+      </div>
+
+      <div class="shop-grid">
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/2010-La-Noblesse-45cm.jpg" alt="La Noblesse" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Portrait · 2010</span>
+            <h3 class="product-title">La Noblesse</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 45 cm</span>
+              <span><strong>Weight</strong> ~3 kg</span>
+              <span><strong>Material</strong> Bronze</span>
+            </div>
+            <p class="product-desc">Gilded bust crowned with a ceremonial hat, rings and chain in patinated bronze.</p>
+            <div class="product-bottom">
+              <div class="product-price">1 200 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="la-noblesse">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/2010-Le-Musicien-60cm-2.jpg" alt="Le Musicien" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Figure · 2010</span>
+            <h3 class="product-title">Le Musicien</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 60 cm</span>
+              <span><strong>Weight</strong> ~4,5 kg</span>
+              <span><strong>Material</strong> Bronze</span>
+            </div>
+            <p class="product-desc">Refined African harp-lute, spinner of the sky. Music, standing like a bow.</p>
+            <div class="product-bottom">
+              <div class="product-price">1 800 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="le-musicien">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/2012-Le-Penseur-30-cm.jpg" alt="Le Penseur" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Figure · 2012</span>
+            <h3 class="product-title">Le Penseur</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 30 cm</span>
+              <span><strong>Weight</strong> ~1,5 kg</span>
+              <span><strong>Material</strong> Gilt bronze</small></span>
+            </div>
+            <p class="product-desc">Gilded figure in the thinker's pose, suspended in meditation.</p>
+            <div class="product-bottom">
+              <div class="product-price">700 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="le-penseur">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/Le-Bagnard-2018.jpg" alt="Le Bagnard" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Figure · 2018</span>
+            <h3 class="product-title">Le Bagnard</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 35 cm</span>
+              <span><strong>Weight</strong> ~2 kg</span>
+              <span><strong>Material</strong> Black bronze</span>
+            </div>
+            <p class="product-desc">Black bronze, méditation lourde. Le poids du temps incarné.</p>
+            <div class="product-bottom">
+              <div class="product-price">1 400 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="le-bagnard">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg" alt="Les Lutteurs" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Group · 2017</span>
+            <h3 class="product-title">Les Lutteurs</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 40 cm</span>
+              <span><strong>Weight</strong> ~3 kg</span>
+              <span><strong>Material</strong> Bronze</span>
+            </div>
+            <p class="product-desc">Agonistic embrace, the sculpture of frozen movement.</p>
+            <div class="product-bottom">
+              <div class="product-price">1 200 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="les-lutteurs">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge unique">Unique piece</span>
+            <img src="../images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg" alt="La Femme dans toute sa Splendeur" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-eyebrow">Figure · 2019</span>
+            <h3 class="product-title">La Femme dans toute sa Splendeur</h3>
+            <div class="product-meta">
+              <span><strong>Height</strong> 55 cm</span>
+              <span><strong>Weight</strong> ~4 kg</span>
+              <span><strong>Material</strong> Bronze</span>
+            </div>
+            <p class="product-desc">Hymn to femininity and majesty. Woman with hat and handbag, mysterious smile.</p>
+            <div class="product-bottom">
+              <div class="product-price">2 200 €<small>shipping included</small></div>
+              <a href="#" class="product-buy" data-product="la-femme-splendeur">Buy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="stripe-note">
+        <strong>⓵ Stripe payment to be activated</strong> — The “Buy” buttons will be connected to Stripe payment links once Firmin's account is created. In the meantime, contact us directly at <a href="mailto:firminleonard.arts@gmail.com" style="color:var(--accent);text-decoration:underline">firminleonard.arts@gmail.com</a> to finalize a purchase.
+      </div>
+    </div>
+  </section>
+
+  <!-- Commande personnalisée -->
+  <section class="custom-order">
+    <div class="container">
+      <div class="custom-grid">
+        <div class="custom-image">
+          <img src="../images/divers/portrait.jpg" alt="Firmin Sanou à l'atelier" loading="lazy">
+        </div>
+        <div class="custom-text">
+          <span class="eyebrow">Commission</span>
+          <h2>A <em>work just for you</em></h2>
+          <p class="lead" style="margin:var(--space-md) 0 var(--space-lg)">A specific idea, a portrait, a subject close to your heart?</p>
+          <p>Firmin also creates sculptures on commission. You discuss the subject, dimensions and budget together. He sends you sketches, then makes the bronze work.</p>
+          <p><strong>Typical delivery:</strong> 6 to 12 weeks depending on complexity. <strong>Starting budget:</strong> €1,500 for a 30 cm piece, adjusted to the project.</p>
+          <div style="margin-top:var(--space-lg)">
+            <a href="mailto:firminleonard.arts@gmail.com?subject=Commande%20personnalis%C3%A9e" class="btn btn-primary">Discuss a commission</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-xl)">
+        <span class="eyebrow">Frequently asked</span>
+        <h2 style="max-width:22ch;margin:0 auto var(--space-md)">All you need to know <em style="color:var(--accent);font-style:italic">before buying</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>How does shipping work?</h4>
+          <p>Each sculpture is <strong>hand-packed by Firmin</strong> in a reinforced wooden crate. Insured tracked shipping worldwide. Allow <strong>2 to 4 weeks</strong> depending on destination (Europe is faster). Shipping is <strong>included in the displayed price</strong> for mainland France and Europe.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is payment secure?</h4>
+          <p>Payment is processed by <strong>Stripe</strong>, the world leader in online payments. Credit card, Apple Pay, Google Pay accepted. <strong>No card data</strong> is stored on the site. Installment payments available for pieces over €1,000.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is there a certificate of authenticity?</h4>
+          <p>Yes. Each sculpture comes with a <strong>certificate hand-signed by Firmin Sanou</strong>, listing the title, year, dimensions, material and a serial number. Your guarantee that the piece is unique.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What if I don't like the sculpture?</h4>
+          <p>You have <strong>14 days</strong> from receipt to change your mind. Return the piece in its original packaging for a full refund (excluding return shipping).</p>
+        </div>
+        <div class="faq-item">
+          <h4>VAT and customs?</h4>
+          <p>For France and the European Union, the displayed price is <strong>all included</strong>. For shipments outside the EU (USA, Canada, Switzerland, etc.), local customs fees may apply on receipt. We provide all necessary invoices for clearance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><span class="brand-name">Firmin Sanou</span><span class="brand-sub">Sculpteur · Fondeur</span></a>
+          <p class="footer-tagline">Bronze, lost-wax, memory in motion. Workshops in Antibes and Bobo Dioulasso.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+            <a href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg></a>
+            <a href="https://wa.me/22676494334" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg></a>
+          </div>
+        </div>
+        <div><h5>Navigate</h5><ul><li><a href="portrait.html">Portrait</a></li><li><a href="oeuvres.html">Works</a></li><li><a href="technique.html">Lost-wax</a></li><li><a href="stages.html">Workshops</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Shop</h5><ul><li><a href="boutique.html">Sculptures for sale</a></li><li><a href="mailto:firminleonard.arts@gmail.com?subject=Commande%20personnalis%C3%A9e">Custom commission</a></li><li><a href="https://www.afrikrea.com/" target="_blank" rel="noopener">Afrikrea shop</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Firmin Sanou. All rights reserved.</span><span class="footer-credit">Website by <a href="https://amiro-dev.netlify.app" target="_blank" rel="noopener"><strong>Amir</strong>, freelance dev</a></span></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/22676494334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact Firmin on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleMenu(){document.querySelector('.nav-toggle').classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open');document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('open')?'hidden':'';}
+    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',toggleMenu));
+
+    // Acheter buttons : pour l'instant ouvrent mailto, à remplacer par Stripe Payment Links
+    document.querySelectorAll('.product-buy').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const product = btn.dataset.product || '';
+        const card = btn.closest('.product-card');
+        const title = card.querySelector('.product-title')?.textContent || '';
+        const price = card.querySelector('.product-price')?.textContent.split('€')[0].trim() || '';
+        const subject = encodeURIComponent(`Purchase: ${title}`);
+        const body = encodeURIComponent(`Hello,\n\nI would like to purchase the sculpture "${title}" (€${price}).\n\nPlease send me the payment and shipping details.\n\nBest regards,`);
+        window.location.href = `mailto:firminleonard.arts@gmail.com?subject=${subject}&body=${body}`;
+      });
+    });
+  </script>
+</body>
+</html>

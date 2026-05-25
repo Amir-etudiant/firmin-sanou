@@ -1,0 +1,61 @@
+{
+  "site": {
+    "titre": "Firmin Sanou",
+    "sous_titre": "Sculpteur Fondeur",
+    "tagline": "Artiste sculpteur burkinabé. Bronze, cire perdue, et la magie du métal en fusion.",
+    "description_meta": "Firmin Sanou, sculpteur fondeur burkinabé, façonne le bronze selon la technique ancestrale de la cire perdue. Œuvres, expositions, stages et fonderie d'art."
+  },
+  "hero": {
+    "image": "images/oeuvres/2010-Le-Musicien-60cm-2.jpg",
+    "titre_avant": "Le bronze,",
+    "titre_apres": "langage de l'âme.",
+    "tagline": "Sculpteur fondeur burkinabé. Depuis l'atelier de Bobo Dioulasso jusqu'aux résidences en Guyane, Firmin Sanou fait dialoguer cire, argile et feu pour donner forme à la mémoire.",
+    "meta_1": "Bobo Dioulasso",
+    "meta_2": "Bronze · Cire perdue",
+    "meta_3": "Depuis 2003"
+  },
+  "intro": {
+    "image": "images/divers/portrait.jpg",
+    "eyebrow": "Le sculpteur",
+    "titre_avant": "L'enfant qui jouait avec",
+    "titre_apres": "l'argile",
+    "lead": "« Enfant, on joue avec l'argile et en grandissant, on crée. »",
+    "texte": "Né en 1982 à Bolomakoté (Bobo Dioulasso, Burkina Faso), Firmin Sanou quitte l'école à 14 ans pour apprendre la sculpture aux côtés du maître fondeur Kader Derme. Dix années d'apprentissage forgent sa main et son regard. En 2011, il fonde son propre atelier à Bobo Dioulasso, où il forme à son tour des jeunes et accueille des artistes du monde entier autour du bronze et de la cire perdue.",
+    "stat_1_num": "1982",
+    "stat_1_lbl": "Né à Bobo Dioulasso",
+    "stat_2_num": "10 ans",
+    "stat_2_lbl": "D'apprentissage",
+    "stat_3_num": "20+",
+    "stat_3_lbl": "Années d'œuvres"
+  },
+  "technique": {
+    "eyebrow": "La technique",
+    "titre": "La cire perdue, geste millénaire",
+    "citation": "Assister à une coulée participe d'un moment privilégié, digne d'une incursion au royaume des Dieux.",
+    "citation_source": "Parc naturel régional Normandie-Maine"
+  },
+  "expos_section": {
+    "eyebrow": "Expositions",
+    "titre": "D'un continent à l'autre",
+    "description": "De Bobo Dioulasso à la Guyane française, en passant par Vallauris, Bordeaux ou Paris, les sculptures de Firmin Sanou voyagent et témoignent."
+  },
+  "services_section": {
+    "eyebrow": "Stages & Fonderie",
+    "titre": "Transmettre le feu",
+    "description": "Firmin Sanou propose des stages d'initiation à la cire perdue et des prestations de fonderie d'art pour artistes, professionnels ou événements."
+  },
+  "contact": {
+    "france_tel_1": "+33 7 67 11 70 40",
+    "france_tel_2": "+33 6 12 38 88 73",
+    "burkina_tel": "+226 76 49 43 34",
+    "whatsapp": "+22676494334",
+    "burkina_adresse": "BP 1232 rue Vidence, Secteur 4 Koko, Bobo Dioulasso",
+    "email": "firminleonard.arts@gmail.com"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/firmin.sanou.3",
+    "instagram": "https://www.instagram.com/firmin.arts/",
+    "youtube": "https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ",
+    "boutique": "https://www.afrikrea.com/"
+  }
+}

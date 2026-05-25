@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firmin Sanou — Sculptor & Founder, Bronze & Lost-wax</title>
+  <meta name="description" content="Firmin Sanou, Burkinabé sculptor and founder. Bronze, lost-wax casting. Works, exhibitions, initiation workshops and art foundry.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../images/divers/portrait.jpg">
+
+  <meta property="og:title" content="Firmin Sanou, sculptor and founder">
+  <meta property="og:description" content="Sculpteur burkinabé, technique de la cire perdue. Bronze, œuvres, stages et fonderie d'art. Ateliers à Antibes et Bobo Dioulasso.">
+  <meta property="og:image" content="../images/oeuvres/2010-Le-Musicien-60cm-2.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://firmin-sanou.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Firmin Sanou",
+    "jobTitle": "Sculpteur Fondeur",
+    "birthDate": "1982",
+    "birthPlace": {"@type": "Place", "name": "Bobo Dioulasso, Burkina Faso"},
+    "nationality": "Burkinabé",
+    "knowsAbout": ["Sculpture", "Bronze", "Cire perdue", "Art foundry"],
+    "url": "https://firmin-sanou.netlify.app",
+    "image": "https://firmin-sanou.netlify.app/images/divers/portrait.jpg",
+    "sameAs": [
+      "https://www.facebook.com/firmin.sanou.3",
+      "https://www.instagram.com/firmin.arts/",
+      "https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ"
+    ],
+    "workLocation": [
+      {"@type": "Place", "name": "Antibes Workshop", "address": {"@type": "PostalAddress", "streetAddress": "24 Bd d'Aguillon", "postalCode": "06600", "addressLocality": "Antibes", "addressCountry": "FR"}},
+      {"@type": "Place", "name": "Bobo Dioulasso Workshop", "address": {"@type": "PostalAddress", "streetAddress": "BP 1232 rue Vidence, Secteur 4 Koko", "addressLocality": "Bobo Dioulasso", "addressCountry": "BF"}}
+    ]
+  }
+  </script>
+
+  <style>
+  /* ============================================
+     FIRMIN SANOU — Design system inline pour preview
+     ============================================ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{line-height:1.6;font-family:var(--font-body);color:var(--text);background:var(--bg);overflow-x:hidden}
+  img,picture,video{max-width:100%;display:block}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  a{color:inherit;text-decoration:none}
+  ul,ol{list-style:none}
+
+  :root{
+    --bg:#faf7f2;--bg-elevated:#f3ede1;--bg-soft:#eae0cd;--bg-card:#ffffff;
+    --text:#1a1612;--text-muted:#5a5046;--text-dim:#8a8275;
+    --accent:#8b6f47;--accent-bright:#b8945e;--accent-deep:#5e4a2e;
+    --border:rgba(26,22,18,0.1);--border-strong:rgba(26,22,18,0.18);
+    --font-display:'Cormorant Garamond','Times New Roman',serif;
+    --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-2xl:6rem;--space-3xl:9rem;
+    --container:1280px;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+    --ease-out:cubic-bezier(0.16,1,0.3,1);
+    --t-fast:200ms;--t-med:400ms;--t-slow:800ms;
+  }
+
+  body{font-size:16px;font-weight:400;letter-spacing:0.01em}
+  h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:400;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
+  h1{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:300}
+  h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:300}
+  h3{font-size:clamp(1.5rem,3vw,2.25rem)}
+  h4{font-size:clamp(1.25rem,2vw,1.5rem)}
+  p{color:var(--text-muted)}
+  p strong{color:var(--text);font-weight:500}
+  .eyebrow{display:inline-block;font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .lead{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:300;line-height:1.5;color:var(--text);font-style:italic}
+
+  .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.container{padding:0 var(--space-xl)}}
+  section{padding:var(--space-2xl) 0}
+  @media(min-width:768px){section{padding:var(--space-3xl) 0}}
+
+  /* Navbar */
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--space-md) 0;background:rgba(250,247,242,0.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:background var(--t-med) var(--ease),border-color var(--t-med) var(--ease),padding var(--t-med) var(--ease)}
+  .navbar.scrolled{background:rgba(250,247,242,0.94);border-bottom-color:var(--border);padding:var(--space-sm) 0}
+  .nav-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
+  @media(min-width:768px){.nav-inner{padding:0 var(--space-xl)}}
+  .brand{font-family:var(--font-display);font-size:1.5rem;font-weight:400;letter-spacing:0.02em;color:var(--text);display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-weight:500}
+  .brand-sub{font-family:var(--font-body);font-size:0.65rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+  .nav-links{display:none;gap:var(--space-lg);align-items:center}
+  @media(min-width:992px){.nav-links{display:flex}}
+  .nav-link{font-size:0.85rem;font-weight:500;letter-spacing:0.05em;color:var(--text-muted);transition:color var(--t-fast) var(--ease);position:relative;padding:4px 0}
+  .nav-link:hover,.nav-link.active{color:var(--text)}
+  .nav-link.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--accent)}
+  .nav-cta{padding:10px 20px;border:1px solid var(--accent);color:var(--accent);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:all var(--t-fast) var(--ease)}
+  .nav-cta:hover{background:var(--accent);color:var(--bg)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;z-index:102}
+  @media(min-width:992px){.nav-toggle{display:none}}
+  .nav-toggle span{width:26px;height:1.5px;background:var(--text);transition:transform var(--t-med) var(--ease),opacity var(--t-fast) var(--ease);transform-origin:center}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);z-index:101;transform:translateX(100%);transition:transform var(--t-med) var(--ease)}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu a{font-family:var(--font-display);font-size:2rem;color:var(--text)}
+  .mobile-menu a:hover{color:var(--accent)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:var(--space-xs);padding:14px 28px;font-size:0.85rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;transition:all var(--t-fast) var(--ease);cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--accent);color:var(--bg)}
+  .btn-primary:hover{background:var(--accent-bright);transform:translateY(-1px);box-shadow:0 10px 30px rgba(139,111,71,0.25)}
+  .btn-outline{border-color:var(--border-strong);color:var(--text)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost{color:var(--text-muted);padding:0}
+  .btn-ghost:hover{color:var(--accent)}
+  .btn-ghost::after{content:'→';transition:transform var(--t-fast) var(--ease);display:inline-block;margin-left:6px}
+  .btn-ghost:hover::after{transform:translateX(4px)}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:80px}
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#0c0a08}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.6) contrast(1.08) saturate(1.15)}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,0.7) 0%,rgba(20,16,12,0.5) 45%,rgba(20,16,12,0.7) 75%,#faf7f2 100%),linear-gradient(90deg,rgba(20,16,12,0.65) 0%,rgba(20,16,12,0.15) 55%,rgba(20,16,12,0) 100%);z-index:1}
+  .hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");opacity:0.08;mix-blend-mode:overlay;pointer-events:none}
+  .hero-content{position:relative;z-index:1;max-width:var(--container);margin:0 auto;padding:var(--space-xl) var(--space-md);width:100%}
+  @media(min-width:768px){.hero-content{padding:var(--space-xl)}}
+  .hero-title{font-size:clamp(3rem,10vw,8rem);font-weight:400;letter-spacing:-0.02em;line-height:0.95;margin-bottom:var(--space-md);max-width:14ch;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,0.5),0 1px 4px rgba(0,0,0,0.4)}
+  .hero-title em{font-style:italic;color:#e6c89a;font-weight:400;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
+  .hero-tagline{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;font-weight:400;color:#f3eee5;max-width:50ch;margin-bottom:var(--space-lg);text-shadow:0 1px 12px rgba(0,0,0,0.6)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:center;margin-bottom:var(--space-xl);font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:#d4ccba;text-shadow:0 1px 4px rgba(0,0,0,0.6)}
+  .hero-meta span:not(:last-child)::after{content:'';display:inline-block;width:30px;height:1px;background:var(--text-dim);margin-left:var(--space-md);vertical-align:middle}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-sm)}
+  .hero-scroll{position:absolute;bottom:var(--space-lg);left:50%;transform:translateX(-50%);font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-dim);display:flex;flex-direction:column;align-items:center;gap:var(--space-xs);z-index:1}
+  .hero-scroll::after{content:'';width:1px;height:30px;background:linear-gradient(180deg,var(--text-dim),transparent);animation:scrollLine 2s var(--ease) infinite}
+  @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* Section heads */
+  .section-head{margin-bottom:var(--space-xl);max-width:60ch}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{margin-bottom:var(--space-md)}
+  .section-head p{font-size:1.05rem}
+
+  /* Intro */
+  .intro{background:var(--bg);position:relative}
+  .intro-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xl);align-items:center}
+  @media(min-width:768px){.intro-grid{grid-template-columns:1fr 1.2fr;gap:var(--space-2xl)}}
+  .intro-image{position:relative;aspect-ratio:4/5;overflow:hidden}
+  .intro-image img{width:100%;height:100%;object-fit:cover;filter:grayscale(0.15) contrast(1.05);transition:transform var(--t-slow) var(--ease)}
+  .intro-image:hover img{transform:scale(1.03)}
+  .intro-image::before{content:'';position:absolute;top:12px;left:12px;width:calc(100% - 24px);height:calc(100% - 24px);border:1px solid var(--accent);z-index:2;pointer-events:none;opacity:0.4}
+  .intro-text h2 em{font-style:italic;color:var(--accent)}
+  .intro-text .lead{margin:var(--space-md) 0 var(--space-lg)}
+  .intro-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:1px solid var(--border)}
+  .intro-stat{text-align:left}
+  .intro-stat .num{font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;color:var(--accent);line-height:1;margin-bottom:4px;display:block}
+  .intro-stat .lbl{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
+
+  /* Gallery */
+  .gallery-section{background:var(--bg-elevated)}
+  .gallery-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
+  @media(min-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+  .oeuvre-card{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bg-card);cursor:pointer;transition:transform var(--t-med) var(--ease)}
+  .oeuvre-card img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease),filter var(--t-med) var(--ease)}
+  .oeuvre-card:hover img{transform:scale(1.05);filter:brightness(1.05)}
+  .oeuvre-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(26,22,18,0.92) 100%);display:flex;align-items:flex-end;padding:var(--space-lg);opacity:0;transition:opacity var(--t-med) var(--ease)}
+  .oeuvre-card:hover .oeuvre-overlay{opacity:1}
+  .oeuvre-info h3{font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:4px;color:var(--text)}
+  .oeuvre-info .meta{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent)}
+
+  /* Technique */
+  .technique{background:var(--bg)}
+  .technique-quote{text-align:center;max-width:32ch;margin:0 auto var(--space-xl);font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.25rem);font-style:italic;font-weight:300;color:var(--text);line-height:1.3}
+  .technique-quote::before,.technique-quote::after{content:'"';font-size:3em;color:var(--accent);line-height:0;vertical-align:middle}
+  .technique-quote::before{margin-right:0.1em}
+  .technique-quote::after{margin-left:0.05em}
+  .technique-steps{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
+  @media(min-width:768px){.technique-steps{grid-template-columns:repeat(4,1fr);gap:var(--space-md)}}
+  .technique-step{position:relative;padding:var(--space-lg) var(--space-md);background:var(--bg-elevated);border:1px solid var(--border);transition:border-color var(--t-med) var(--ease),transform var(--t-med) var(--ease)}
+  .technique-step:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .technique-step .num{font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--accent);line-height:1;margin-bottom:var(--space-md)}
+  .technique-step h4{font-family:var(--font-display);font-size:1.25rem;margin-bottom:var(--space-xs)}
+  .technique-step p{font-size:0.95rem}
+
+  /* Expos */
+  .expos{background:var(--bg-elevated)}
+  .expos-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg)}
+  @media(min-width:768px){.expos-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.expos-grid{grid-template-columns:repeat(3,1fr)}}
+  .expo-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+  .expo-card:hover{transform:translateY(-6px);border-color:var(--accent)}
+  .expo-image{aspect-ratio:3/4;overflow:hidden;background:var(--bg)}
+  .expo-image img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease)}
+  .expo-card:hover .expo-image img{transform:scale(1.05)}
+  .expo-content{padding:var(--space-lg);flex-grow:1;display:flex;flex-direction:column}
+  .expo-date{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-xs)}
+  .expo-content h3{font-family:var(--font-display);font-size:1.5rem;margin-bottom:var(--space-xs)}
+  .expo-location{font-size:0.9rem;color:var(--text-muted);margin-bottom:var(--space-sm)}
+  .expo-description{font-size:0.9rem;margin-top:auto}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
+  @media(min-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+  .service-card{position:relative;padding:var(--space-xl);background:var(--bg-card);border:1px solid var(--border);overflow:hidden;transition:border-color var(--t-med) var(--ease)}
+  .service-card:hover{border-color:var(--accent)}
+  .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .service-card h3{font-family:var(--font-display);margin-bottom:var(--space-md)}
+  .service-card .icon{font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--accent);margin-bottom:var(--space-md);line-height:1;display:block}
+
+  /* Contact */
+  .contact{background:var(--bg-elevated)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xl)}
+  @media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr;gap:var(--space-2xl)}}
+  .contact-block{margin-bottom:var(--space-lg)}
+  .contact-block h4{font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-sm)}
+  .contact-block p,.contact-block a{font-size:1rem;color:var(--text);display:block;margin-bottom:4px;transition:color var(--t-fast) var(--ease)}
+  .contact-block a:hover{color:var(--accent)}
+  .contact-block .muted{color:var(--text-muted);font-size:0.9rem}
+  .social-row{display:flex;gap:var(--space-sm);margin-top:var(--space-md)}
+  .social-link{width:44px;height:44px;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;transition:all var(--t-fast) var(--ease)}
+  .social-link:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
+  .social-link svg{width:18px;height:18px}
+
+  /* Footer */
+  .footer{background:var(--bg);border-top:1px solid var(--border);padding:var(--space-xl) 0 var(--space-md)}
+  .footer-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);margin-bottom:var(--space-xl)}
+  @media(min-width:768px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-xl)}}
+  .footer h5{font-family:var(--font-body);font-size:0.7rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .footer-tagline{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);max-width:36ch;margin-top:var(--space-sm)}
+  .footer ul{display:flex;flex-direction:column;gap:var(--space-xs)}
+  .footer a{color:var(--text-muted);font-size:0.9rem;transition:color var(--t-fast) var(--ease)}
+  .footer a:hover{color:var(--accent)}
+  .footer-bottom{padding-top:var(--space-md);border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-sm);font-size:0.8rem;color:var(--text-dim)}
+  .footer-social{display:flex;gap:10px;margin-top:var(--space-md);flex-wrap:wrap}
+  .footer-social a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-strong);color:var(--text-muted);transition:all var(--t-fast) var(--ease)}
+  .footer-social a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px}
+
+  /* Reveals */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out)}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .reveal-delay-1{transition-delay:100ms}
+  .reveal-delay-2{transition-delay:200ms}
+  .reveal-delay-3{transition-delay:300ms}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(26,22,18,0.92);z-index:200;display:none;align-items:center;justify-content:center;padding:var(--space-md);backdrop-filter:blur(10px)}
+  .lightbox.open{display:flex}
+  .lightbox-content{position:relative;max-width:1100px;width:100%;display:grid;grid-template-columns:1fr;gap:var(--space-lg);align-items:center;max-height:90vh}
+  @media(min-width:768px){.lightbox-content{grid-template-columns:1.5fr 1fr}}
+  .lightbox-image{background:var(--bg-soft);max-height:80vh;display:flex;align-items:center;justify-content:center}
+  .lightbox-image img{max-height:80vh;max-width:100%;width:auto;height:auto;object-fit:contain}
+  .lightbox-info{padding:var(--space-lg) var(--space-md);color:#f3eee5}
+  .lightbox-info .eyebrow{color:#e6c89a;font-size:0.7rem;letter-spacing:0.32em;text-transform:uppercase;font-weight:500;margin-bottom:var(--space-xs);display:block}
+  .lightbox-info h3{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.4rem);margin:var(--space-xs) 0 var(--space-lg);color:#f3eee5;font-weight:300;font-style:italic;letter-spacing:-0.02em;line-height:1.05;position:relative;padding-bottom:var(--space-md)}
+  .lightbox-info h3::after{content:'';display:block;width:54px;height:1px;background:#e6c89a;position:absolute;bottom:0;left:0;opacity:0.6}
+  .lightbox-info p{color:#d4ccba;font-size:1.05rem;line-height:1.7;font-family:var(--font-display);font-style:italic;font-weight:300;margin-bottom:var(--space-md)}
+  .lightbox-meta{display:grid;grid-template-columns:max-content 1fr;gap:var(--space-sm) var(--space-md);margin-top:var(--space-xl);padding-top:var(--space-md);border-top:1px solid rgba(243,238,229,0.12);font-size:0.85rem}
+  .lightbox-meta dt{color:#a09a8e;text-transform:uppercase;font-size:0.7rem;letter-spacing:0.22em;font-weight:500}
+  .lightbox-meta dd{color:#f3eee5;font-family:var(--font-display);font-style:italic;font-size:1rem}
+  .lightbox-close{position:absolute;top:-50px;right:0;width:44px;height:44px;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--text);transition:all var(--t-fast) var(--ease);background:rgba(250,247,242,0.7)}
+  .lightbox-close:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  @media(max-width:900px){.lightbox-close{top:10px;right:10px}}
+
+  /* Utilities */
+  .text-center{text-align:center}
+  .mt-lg{margin-top:var(--space-lg)}
+  ::selection{background:var(--accent);color:var(--bg)}
+  ::-webkit-scrollbar{width:8px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--bg-soft)}
+  ::-webkit-scrollbar-thumb:hover{background:var(--accent-deep)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  /* Témoignages */
+  .testimonials{background:var(--bg-elevated)}
+  .testimonials-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
+  @media(min-width:768px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+  .testimonial{padding:var(--space-xl);background:var(--bg-card);border:1px solid var(--border);position:relative;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+  .testimonial:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .testimonial::before{content:'"';position:absolute;top:10px;left:20px;font-family:var(--font-display);font-size:5rem;color:var(--accent);opacity:0.25;line-height:1}
+  .testimonial p{font-family:var(--font-display);font-size:1.1rem;font-style:italic;line-height:1.6;color:var(--text);margin-bottom:var(--space-md);position:relative;z-index:1}
+  .testimonial cite{display:block;font-size:0.85rem;color:var(--text-muted);font-style:normal;border-top:1px solid var(--border);padding-top:var(--space-sm)}
+  .testimonial cite strong{color:var(--accent);font-weight:500}
+
+  /* Newsletter */
+  .newsletter{background:var(--bg);text-align:center;border-top:1px solid var(--border)}
+  .newsletter-card{max-width:560px;margin:0 auto;padding:var(--space-xl);background:var(--bg-elevated);border:1px solid var(--border)}
+  .newsletter h2{margin-bottom:var(--space-md)}
+  .newsletter h2 em{color:var(--accent);font-style:italic}
+  .newsletter p{margin-bottom:var(--space-lg);font-size:0.95rem}
+  .newsletter-form{display:flex;gap:var(--space-xs);max-width:420px;margin:0 auto;flex-wrap:wrap}
+  .newsletter-form input{flex:1;min-width:200px;padding:14px 18px;border:1px solid var(--border-strong);background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:1rem;transition:border-color var(--t-fast) var(--ease)}
+  .newsletter-form input:focus{outline:none;border-color:var(--accent)}
+  .newsletter-form button{padding:14px 24px;background:var(--accent);color:var(--bg);font-size:0.85rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border:none;transition:background var(--t-fast) var(--ease)}
+  .newsletter-form button:hover{background:var(--accent-bright)}
+  .newsletter-success{display:none;color:var(--accent);font-family:var(--font-display);font-style:italic;font-size:1.1rem;margin-top:var(--space-md)}
+  .newsletter-success.show{display:block}
+
+  .lang-toggle{padding:7px 12px;border:1px solid var(--border-strong);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1);margin-left:8px}
+  .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
+  .footer-credit a{color:var(--accent);border-bottom:1px solid var(--accent);transition:all 200ms cubic-bezier(0.22,1,0.36,1);padding-bottom:1px}
+  .footer-credit a:hover{color:var(--accent-bright);border-bottom-color:transparent}
+  .footer-credit a strong{font-weight:600}
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.45);z-index:90;transition:transform 200ms cubic-bezier(0.22,1,0.36,1)}
+  .whatsapp-float:hover{transform:scale(1.08)}
+  .whatsapp-float svg{width:30px;height:30px}
+  .whatsapp-float::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,0.4);animation:waPulse 2.4s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(0.95);opacity:1}100%{transform:scale(1.4);opacity:0}}
+  @media(max-width:768px){.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px}.whatsapp-float svg{width:26px;height:26px}}
+  </style>
+</head>
+<body>
+  <div style="background:var(--bg-elevated);border-bottom:1px solid var(--border);padding:8px 0;text-align:center;font-size:0.78rem;color:var(--text-muted);font-family:var(--font-body);position:fixed;top:70px;left:0;right:0;z-index:50">
+    English version · <a href="../index.html" style="color:var(--accent)">Voir en français</a>
+  </div>
+  <div style="height:34px"></div>
+
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">Firmin Sanou</span>
+        <span class="brand-sub">Sculpteur · Fondeur</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="portrait.html" class="nav-link">Portrait</a>
+        <a href="oeuvres.html" class="nav-link">Works</a>
+        <a href="technique.html" class="nav-link">Lost-wax</a>
+        <a href="stages.html" class="nav-link">Workshops · Foundry</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="../index.html" class="lang-toggle">FR</a>
+        <a href="boutique.html" class="nav-cta">Shop</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Netlify Identity (redirection après login via email d'invitation) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="oeuvres.html">Works</a>
+    <a href="technique.html">Lost-wax</a>
+    <a href="stages.html">Workshops · Foundry</a>
+    <a href="contact.html">Contact</a>
+    <a href="../index.html">FR · Français</a>
+    <a href="boutique.html">Shop</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline poster="../videos/hero-poster.jpg">
+        <source src="../videos/hero-bronze-pour.webm" type="video/webm">
+        <source src="../videos/hero-bronze-pour.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <span class="eyebrow reveal" style="color:#e6c89a;text-shadow:0 1px 8px rgba(0,0,0,0.6)">Firmin Sanou · Burkina Faso</span>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Bronze,<br>
+        <em>the language of the soul.</em>
+      </h1>
+      <p class="hero-tagline reveal reveal-delay-2">
+        Burkinabé sculptor and founder. From his Bobo Dioulasso workshop to artist residencies in French Guiana, Firmin Sanou brings wax, clay and fire together to give shape to memory.
+      </p>
+      <div class="hero-meta reveal reveal-delay-3">
+        <span>Bobo Dioulasso</span>
+        <span>Bronze · Lost-wax</span>
+        <span>Since 2003</span>
+      </div>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="oeuvres.html" class="btn btn-primary">View the works</a>
+        <a href="portrait.html" class="btn btn-outline">About Firmin</a>
+      </div>
+    </div>
+    <span class="hero-scroll">Scroll</span>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-image reveal">
+          <img src="../images/divers/portrait.jpg" alt="Portrait de Firmin Sanou">
+        </div>
+        <div class="intro-text">
+          <span class="eyebrow reveal">About Firmin</span>
+          <h2 class="reveal reveal-delay-1">The child who played with <em>clay</em></h2>
+          <p class="lead reveal reveal-delay-2">“As a child you play with clay, and as you grow, you create.”</p>
+          <p class="reveal reveal-delay-3">Born in 1982 in Bolomakoté (Bobo Dioulasso, Burkina Faso), Firmin Sanou left school at 14 to learn sculpture alongside master founder Kader Derme. Ten years of apprenticeship shaped his hand and eye. In 2011 he founded his own workshop in Bobo Dioulasso, where he now trains young apprentices and welcomes artists from around the world to discover bronze and lost-wax casting.</p>
+          <div class="intro-stats reveal reveal-delay-3">
+            <div class="intro-stat"><span class="num">1982</span><span class="lbl">Born in Bobo Dioulasso</span></div>
+            <div class="intro-stat"><span class="num">10 ans</span><span class="lbl">Of training</span></div>
+            <div class="intro-stat"><span class="num">20+</span><span class="lbl">Years of work</span></div>
+          </div>
+          <div class="mt-lg reveal reveal-delay-3">
+            <a href="portrait.html" class="btn btn-ghost">Read the full journey</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technique -->
+  <section class="technique">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow reveal">The technique</span>
+        <h2 class="reveal reveal-delay-1">Lost-wax, a millennial gesture</h2>
+      </div>
+      <p class="technique-quote reveal reveal-delay-1">
+        To witness a bronze pour is a privileged moment, like an incursion into the realm of the Gods.
+      </p>
+      <div class="technique-steps">
+        <div class="technique-step reveal">
+          <span class="num">01</span>
+          <h4>Wax modeling</h4>
+          <p>The artist sculpts a model in beeswax, translating the idea into volume with precision.</p>
+        </div>
+        <div class="technique-step reveal reveal-delay-1">
+          <span class="num">02</span>
+          <h4>Clay mold</h4>
+          <p>The wax is wrapped in three successive clay layers that dry to form the mold.</p>
+        </div>
+        <div class="technique-step reveal reveal-delay-2">
+          <span class="num">03</span>
+          <h4>Dewaxing & pouring</h4>
+          <p>The heated mold releases the wax; molten bronze at 1800° fills its exact place.</p>
+        </div>
+        <div class="technique-step reveal reveal-delay-3">
+          <span class="num">04</span>
+          <h4>Finishing</h4>
+          <p>Breaking the mold reveals the piece. Sanding, chiseling and patina give it its final face.</p>
+        </div>
+      </div>
+      <div class="text-center mt-lg reveal">
+        <a href="technique.html" class="btn btn-ghost">Full technique</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie œuvres -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Gallery</span>
+        <h2 class="reveal reveal-delay-1">A selection of <em>works</em></h2>
+        <p class="reveal reveal-delay-2">Bronze sculptures cast in lost-wax. More than a decade of gestures, patinas and stories.</p>
+      </div>
+      <div class="gallery-grid">
+        <article class="oeuvre-card reveal" onclick="openLightbox(0)">
+          <img src="../images/oeuvres/2010-Le-Musicien-60cm-2.jpg" alt="Le Musicien" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>Le Musicien</h3><span class="meta">2010 · 60 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-1" onclick="openLightbox(1)">
+          <img src="../images/oeuvres/2010-La-Noblesse-45cm.jpg" alt="La Noblesse" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>La Noblesse</h3><span class="meta">2010 · 45 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-2" onclick="openLightbox(2)">
+          <img src="../images/oeuvres/Le-Bagnard-2018.jpg" alt="Le Bagnard" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>Le Bagnard</h3><span class="meta">2018</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal" onclick="openLightbox(3)">
+          <img src="../images/oeuvres/2012-Le-Penseur-30-cm.jpg" alt="Le Penseur" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>Le Penseur</h3><span class="meta">2012 · 30 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-1" onclick="openLightbox(4)">
+          <img src="../images/oeuvres/2012-Bracelets-35cm.jpg" alt="Bracelets" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>Bracelets</h3><span class="meta">2012 · 35 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-2" onclick="openLightbox(5)">
+          <img src="../images/oeuvres/La-Maripa-et-LAmerindien.jpg" alt="La Maripa et l'Amérindien" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>La Maripa et l'Amérindien</h3><span class="meta">2020 · Guyane</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal" onclick="openLightbox(6)">
+          <img src="../images/oeuvres/2012-La-Famille-30-cm.jpg" alt="La Famille" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>La Famille</h3><span class="meta">2012 · 30 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-1" onclick="openLightbox(7)">
+          <img src="../images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg" alt="Les Lutteurs" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>Les Lutteurs</h3><span class="meta">2017 · 40 cm</span></div></div>
+        </article>
+        <article class="oeuvre-card reveal reveal-delay-2" onclick="openLightbox(8)">
+          <img src="../images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg" alt="La Femme dans toute sa Splendeur" loading="lazy">
+          <div class="oeuvre-overlay"><div class="oeuvre-info"><h3>La Femme dans toute sa Splendeur</h3><span class="meta">2019</span></div></div>
+        </article>
+      </div>
+      <div class="text-center mt-lg reveal">
+        <a href="oeuvres.html" class="btn btn-outline">View all works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expositions -->
+  <section class="expos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Exhibitions</span>
+        <h2 class="reveal reveal-delay-1">From one continent <em>to another</em></h2>
+        <p class="reveal reveal-delay-2">From Bobo Dioulasso to French Guiana, through Vallauris, Bordeaux and Paris, the sculptures travel and bear witness.</p>
+      </div>
+      <div class="expos-grid">
+        <article class="expo-card reveal">
+          <div class="expo-image"><img src="../images/expositions/affiche_expo-firmin-d-un-monde-a-l-autre2023.jpeg" alt="D'Un Monde à l'Autre" loading="lazy"></div>
+          <div class="expo-content">
+            <span class="expo-date">October 2023</span>
+            <h3>D'Un Monde à l'Autre</h3>
+            <div class="expo-location">Vallauris, France</div>
+            <p class="expo-description">Exhibition in Vallauris, historic city of ceramics and sculpture.</p>
+          </div>
+        </article>
+        <article class="expo-card reveal reveal-delay-1">
+          <div class="expo-image"><img src="../images/expositions/affiche-Web_expo-firmin-origines-bordeaux1-2-2.jpg" alt="Origines Bordeaux" loading="lazy"></div>
+          <div class="expo-content">
+            <span class="expo-date">September 2022</span>
+            <h3>Origines — Bordeaux</h3>
+            <div class="expo-location">Bordeaux, France</div>
+            <p class="expo-description">Sculptures on the theme of African roots and cultural heritage.</p>
+          </div>
+        </article>
+        <article class="expo-card reveal reveal-delay-2">
+          <div class="expo-image"><img src="../images/expositions/Affiche-Canon-21.jpg" alt="Farafina Lili" loading="lazy"></div>
+          <div class="expo-content">
+            <span class="expo-date">October 2021</span>
+            <h3>Farafina Lili</h3>
+            <div class="expo-location">France</div>
+            <p class="expo-description">Highlighting African culture through bronze.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow reveal">Testimonials</span>
+        <h2 class="reveal reveal-delay-1">What they <em style="color:var(--accent);font-style:italic">say</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <p>A rare encounter with an artist who teaches as much as he creates. The lost-wax workshop with Firmin will remain a defining moment.</p>
+          <cite><strong>Élodie M.</strong> · Participant 2023, Antibes</cite>
+        </div>
+        <div class="testimonial reveal reveal-delay-1">
+          <p>The sculpture I purchased has become the centerpiece of my living room. Firmin's bronze has a soul.</p>
+          <cite><strong>Jean-Pierre L.</strong> · Collector, Bordeaux</cite>
+        </div>
+        <div class="testimonial reveal reveal-delay-2">
+          <p>Working with Firmin on the Saint-Laurent du Maroni exhibition was a true human and artistic adventure.</p>
+          <cite><strong>Mairie de Saint-Laurent du Maroni</strong> · French Guiana</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow reveal">Workshops & Foundry</span>
+        <h2 class="reveal reveal-delay-1">Passing on <em>the fire</em></h2>
+        <p class="reveal reveal-delay-2">Firmin offers lost-wax initiation workshops and art foundry services for artists, professionals and events.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal reveal-delay-1">
+          <span class="icon">✦</span>
+          <h3>Initiation workshops</h3>
+          <p>Learn lost-wax casting, from modeling to bronze pouring. For children from age 6, adults and families, from 6 participants.</p>
+          <div class="mt-lg">
+            <a href="stages.html" class="btn btn-ghost">Learn more</a>
+          </div>
+        </article>
+        <article class="service-card reveal reveal-delay-2">
+          <span class="icon">◈</span>
+          <h3>Art foundry</h3>
+          <p>Live performances and demonstrations at events. Bronze or aluminum casting for artists, professionals and amateurs.</p>
+          <div class="mt-lg">
+            <a href="stages.html#fonderie" class="btn btn-ghost">View services</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <span class="eyebrow reveal">Newsletter</span>
+        <h2 class="reveal reveal-delay-1">Follow the <em>next exhibitions</em></h2>
+        <p class="reveal reveal-delay-2">One email per year, max. No spam, just real news from the workshop.</p>
+        <form class="newsletter-form reveal reveal-delay-2" name="newsletter" method="POST" data-netlify="true" onsubmit="document.querySelector('.newsletter-success').classList.add('show');this.style.display='none';">
+          <input type="hidden" name="form-name" value="newsletter">
+          <input type="email" name="email" placeholder="ton@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-success">Subscription confirmed. See you soon by email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow reveal">Contact</span>
+        <h2 class="reveal reveal-delay-1">An <em>idea</em>, a project?</h2>
+        <p class="reveal reveal-delay-2">To buy a work, host an exhibition, schedule a workshop or commission an art casting.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-block">
+            <h4>Antibes Workshop</h4>
+            <p class="muted">24 Bd d'Aguillon, 06600 Antibes</p>
+            <a href="tel:+33767117040">+33 7 67 11 70 40</a>
+          </div>
+          <div class="contact-block">
+            <h4>Bobo Dioulasso Workshop</h4>
+            <a href="tel:+22676494334">+226 76 49 43 34</a>
+            <p class="muted">BP 1232 rue Vidence, Secteur 4 Koko, Bobo Dioulasso</p>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="contact-block">
+            <h4>Write</h4>
+            <a href="mailto:firminleonard.arts@gmail.com">firminleonard.arts@gmail.com</a>
+          </div>
+          <div class="contact-block">
+            <h4>Follow</h4>
+            <div class="social-row">
+              <a class="social-link" href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+              </a>
+              <a class="social-link" href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0Zm0 5.838c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162ZM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4Zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439Z"/></svg>
+              </a>
+              <a class="social-link" href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
+              </a>
+              <a class="social-link" href="https://wa.me/22676494334" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-lg reveal">
+        <a href="contact.html" class="btn btn-primary">Full contact page</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <span class="brand-name">Firmin Sanou</span>
+            <span class="brand-sub">Sculpteur · Fondeur</span>
+          </a>
+          <p class="footer-tagline">Bronze, lost-wax, memory in motion. Workshops in Antibes and Bobo Dioulasso.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+            <a href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg></a>
+            <a href="https://wa.me/22676494334" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="portrait.html">Portrait</a></li>
+            <li><a href="oeuvres.html">Works</a></li>
+            <li><a href="technique.html">Lost-wax</a></li>
+            <li><a href="stages.html">Workshops</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Links</h5>
+          <ul>
+            <li><a href="https://www.afrikrea.com/" target="_blank" rel="noopener">Online shop</a></li>
+            <li><a href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Firmin Sanou. All rights reserved.</span>
+        <span class="footer-credit">Website by <a href="https://amiro-dev.netlify.app" target="_blank" rel="noopener"><strong>Amir</strong>, freelance dev</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox container -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <div class="lightbox-content">
+      <div class="lightbox-image"><img id="lb-img" alt=""></div>
+      <div class="lightbox-info">
+        <span class="eyebrow" id="lb-cat"></span>
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc"></p>
+        <dl class="lightbox-meta" id="lb-meta"></dl>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Hero video : force play
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) heroVideo.play().catch(() => {});
+
+    // Navbar scroll
+    const nav = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }, { passive: true });
+
+    // Mobile menu
+    function toggleMenu() {
+      document.querySelector('.nav-toggle').classList.toggle('open');
+      document.querySelector('.mobile-menu').classList.toggle('open');
+      document.body.style.overflow = document.querySelector('.mobile-menu').classList.contains('open') ? 'hidden' : '';
+    }
+    document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', toggleMenu));
+
+    // Reveals on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Lightbox data (inline)
+    const OEUVRES = [
+      { titre: 'Le Musicien', annee: 2010, taille: '60 cm', categorie: 'Figure', image: '../images/oeuvres/2010-Le-Musicien-60cm-2.jpg', description: 'Harpe-luth africaine épurée, fileuse du ciel.' },
+      { titre: 'La Noblesse', annee: 2010, taille: '45 cm', categorie: 'Portrait', image: '../images/oeuvres/2010-La-Noblesse-45cm.jpg', description: 'Buste doré coiffé d\'un chapeau de cérémonie.' },
+      { titre: 'Le Bagnard', annee: 2018, taille: null, categorie: 'Figure', image: '../images/oeuvres/Le-Bagnard-2018.jpg', description: 'Bronze noir, méditation lourde. Le poids du temps incarné.' },
+      { titre: 'Le Penseur', annee: 2012, taille: '30 cm', categorie: 'Figure', image: '../images/oeuvres/2012-Le-Penseur-30-cm.jpg', description: 'Figure dorée, posée comme suspendue dans la pensée.' },
+      { titre: 'Bracelets', annee: 2012, taille: '35 cm', categorie: 'Figure', image: '../images/oeuvres/2012-Bracelets-35cm.jpg' },
+      { titre: 'La Maripa et l\'Amérindien', annee: 2020, taille: null, categorie: 'Figure', image: '../images/oeuvres/La-Maripa-et-LAmerindien.jpg', description: 'Œuvre née de la résidence en French Guiana.' },
+      { titre: 'La Famille', annee: 2012, taille: '30 cm', categorie: 'Groupe', image: '../images/oeuvres/2012-La-Famille-30-cm.jpg', description: 'Trois visages enlacés dans un cercle de bronze patiné.' },
+      { titre: 'Les Lutteurs', annee: 2017, taille: '40 cm', categorie: 'Groupe', image: '../images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg' },
+      { titre: 'La Femme dans toute sa Splendeur', annee: 2019, taille: null, categorie: 'Figure', image: '../images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg', description: 'Hymne à la féminité et à la majesté.' },
+    ];
+
+    function openLightbox(i) {
+      const o = OEUVRES[i];
+      if (!o) return;
+      document.getElementById('lb-img').src = o.image;
+      document.getElementById('lb-img').alt = o.titre;
+      document.getElementById('lb-cat').textContent = o.categorie || 'Sculpture';
+      document.getElementById('lb-title').textContent = o.titre;
+      document.getElementById('lb-desc').textContent = o.description || '';
+      const meta = document.getElementById('lb-meta');
+      meta.innerHTML = '';
+      if (o.annee) meta.innerHTML += `<dt>Année</dt><dd>${o.annee}</dd>`;
+      if (o.taille) meta.innerHTML += `<dt>Hauteur</dt><dd>${o.taille}</dd>`;
+      meta.innerHTML += `<dt>Matière</dt><dd>Bronze, cire perdue</dd>`;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox') closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+  <a href="https://wa.me/22676494334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact Firmin on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
+  </a>
+</body>
+</html>

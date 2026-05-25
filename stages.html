@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stages & Fonderie d'art — Firmin Sanou</title>
+  <meta name="description" content="Stages d'initiation au bronze et à la cire perdue par Firmin Sanou. Performances et fonderie d'art pour artistes, professionnels et événements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/divers/portrait.jpg">
+  <style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{line-height:1.6;font-family:var(--font-body);color:var(--text);background:var(--bg);overflow-x:hidden}
+  img{max-width:100%;display:block}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  :root{--bg:#faf7f2;--bg-elevated:#f3ede1;--bg-soft:#eae0cd;--bg-card:#ffffff;--text:#1a1612;--text-muted:#5a5046;--text-dim:#8a8275;--accent:#8b6f47;--accent-bright:#b8945e;--accent-deep:#5e4a2e;--border:rgba(26,22,18,0.1);--border-strong:rgba(26,22,18,0.18);--font-display:'Cormorant Garamond','Times New Roman',serif;--font-body:'Inter',-apple-system,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-2xl:6rem;--space-3xl:9rem;--container:1280px;--ease:cubic-bezier(0.22,1,0.36,1);--t-fast:200ms;--t-med:400ms}
+  body{font-size:16px}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
+  h1{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:300}
+  h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:300}
+  h3{font-size:clamp(1.5rem,3vw,2.25rem)}
+  p{color:var(--text-muted)}
+  .eyebrow{display:inline-block;font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .lead{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:300;line-height:1.5;color:var(--text);font-style:italic}
+  .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.container{padding:0 var(--space-xl)}}
+  .container-narrow{max-width:880px;margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.container-narrow{padding:0 var(--space-xl)}}
+  section{padding:var(--space-2xl) 0}
+  @media(min-width:768px){section{padding:var(--space-3xl) 0}}
+
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--space-md) 0;background:rgba(250,247,242,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
+  @media(min-width:768px){.nav-inner{padding:0 var(--space-xl)}}
+  .brand{font-family:var(--font-display);font-size:1.5rem;color:var(--text);display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-weight:500}
+  .brand-sub{font-family:var(--font-body);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+  .nav-links{display:none;gap:var(--space-lg);align-items:center}
+  @media(min-width:992px){.nav-links{display:flex}}
+  .nav-link{font-size:0.85rem;font-weight:500;color:var(--text-muted);position:relative;padding:4px 0}
+  .nav-link:hover,.nav-link.active{color:var(--text)}
+  .nav-link.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--accent)}
+  .nav-cta{padding:10px 20px;border:1px solid var(--accent);color:var(--accent);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase}
+  .nav-cta:hover{background:var(--accent);color:var(--bg)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;z-index:102}
+  @media(min-width:992px){.nav-toggle{display:none}}
+  .nav-toggle span{width:26px;height:1.5px;background:var(--text);transition:transform var(--t-med) var(--ease)}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);z-index:101;transform:translateX(100%);transition:transform var(--t-med) var(--ease)}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu a{font-family:var(--font-display);font-size:2rem;color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:var(--space-xs);padding:14px 28px;font-size:0.85rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;border:1px solid transparent}
+  .btn-primary{background:var(--accent);color:var(--bg)}
+  .btn-primary:hover{background:var(--accent-bright)}
+  .btn-outline{border-color:var(--border-strong);color:var(--text)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+  .page-header{padding-top:calc(80px + var(--space-2xl));padding-bottom:var(--space-xl)}
+  .page-header-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
+  @media(min-width:768px){.page-header-inner{padding:0 var(--space-xl)}}
+  .page-header h1{margin-bottom:var(--space-md);max-width:18ch}
+  .page-header h1 em{color:var(--accent);font-style:italic}
+  .page-header p{font-size:1.1rem;max-width:55ch}
+  .breadcrumb{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:var(--space-md)}
+
+  /* Hero stages */
+  .stage-hero{background:var(--bg-elevated)}
+  .stage-hero-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xl);align-items:center}
+  @media(min-width:768px){.stage-hero-grid{grid-template-columns:1.1fr 1fr;gap:var(--space-2xl)}}
+  .stage-hero-image{aspect-ratio:4/5;overflow:hidden;position:relative}
+  .stage-hero-image img{width:100%;height:100%;object-fit:cover}
+  .stage-hero-text p{font-size:1.05rem;line-height:1.75;margin-bottom:var(--space-md)}
+
+  /* Formules */
+  .formules-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md);margin-top:var(--space-xl)}
+  @media(min-width:768px){.formules-grid{grid-template-columns:repeat(2,1fr)}}
+  .formule-card{padding:var(--space-xl);background:var(--bg-card);border:1px solid var(--border);transition:border-color var(--t-med) var(--ease)}
+  .formule-card:hover{border-color:var(--accent)}
+  .formule-card .badge{display:inline-block;padding:4px 12px;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);margin-bottom:var(--space-md)}
+  .formule-card h3{font-family:var(--font-display);margin-bottom:var(--space-md)}
+  .formule-card .price{font-family:var(--font-display);font-size:2.5rem;color:var(--accent);font-weight:400;line-height:1;display:block;margin:var(--space-md) 0}
+  .formule-card .price-note{font-size:0.85rem;color:var(--text-dim)}
+
+  /* Etapes process */
+  .process{background:var(--bg)}
+  .process-list{counter-reset:proc;max-width:760px;margin:0 auto;padding:0;display:grid;gap:var(--space-md)}
+  .process-item{counter-increment:proc;padding:var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 60px);position:relative;background:var(--bg-elevated);border:1px solid var(--border);transition:border-color var(--t-med) var(--ease)}
+  .process-item:hover{border-color:var(--accent)}
+  .process-item::before{content:counter(proc,decimal-leading-zero);position:absolute;left:var(--space-md);top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:1.75rem;color:var(--accent);font-weight:400}
+  .process-item strong{color:var(--text);font-weight:500;display:block;margin-bottom:4px;font-size:1.05rem}
+  .process-item span{color:var(--text-muted);font-size:0.9rem}
+
+  /* Tarifs */
+  .pricing{background:var(--bg-elevated)}
+  .pricing-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md);max-width:720px;margin:var(--space-xl) auto 0}
+  @media(min-width:600px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+  .pricing-card{padding:var(--space-xl);background:var(--bg-card);border:1px solid var(--border);text-align:center;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+  .pricing-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .pricing-card .who{font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-md)}
+  .pricing-card .price{font-family:var(--font-display);font-size:3.5rem;color:var(--accent);font-weight:400;line-height:1;margin-bottom:var(--space-xs)}
+  .pricing-card .detail{font-size:0.85rem;color:var(--text-dim);margin-top:var(--space-md);padding-top:var(--space-md);border-top:1px solid var(--border)}
+
+  /* Fonderie */
+  .fonderie{background:var(--bg);position:relative}
+  .fonderie-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md);margin-top:var(--space-xl)}
+  @media(min-width:768px){.fonderie-grid{grid-template-columns:repeat(2,1fr)}}
+  .fonderie-card{padding:var(--space-xl);background:var(--bg-card);border:1px solid var(--border);position:relative;overflow:hidden;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+  .fonderie-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .fonderie-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .fonderie-card .icon{font-family:var(--font-display);font-size:3rem;color:var(--accent);line-height:1;margin-bottom:var(--space-md);display:block;font-weight:300}
+  .fonderie-card h3{font-family:var(--font-display);margin-bottom:var(--space-md)}
+  .fonderie-card p{font-size:1rem;line-height:1.7}
+
+  /* CTA contact */
+  .cta-contact{text-align:center;background:var(--bg-elevated);padding:var(--space-3xl) 0}
+  .cta-contact h2{margin:0 auto var(--space-md);max-width:20ch}
+  .cta-contact h2 em{color:var(--accent);font-style:italic}
+  .cta-contact p{max-width:50ch;margin:0 auto var(--space-lg)}
+  .cta-contact .info-row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-lg);margin-top:var(--space-lg);font-size:0.95rem;color:var(--text)}
+  .cta-contact .info-row a{color:var(--accent)}
+
+  .footer{background:var(--bg);border-top:1px solid var(--border);padding:var(--space-xl) 0 var(--space-md)}
+  .footer-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);margin-bottom:var(--space-xl)}
+  @media(min-width:768px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-xl)}}
+  .footer h5{font-size:0.7rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
+  .footer-tagline{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);max-width:36ch;margin-top:var(--space-sm)}
+  .footer ul{display:flex;flex-direction:column;gap:var(--space-xs)}
+  .footer a{color:var(--text-muted);font-size:0.9rem}
+  .footer a:hover{color:var(--accent)}
+  .footer-bottom{padding-top:var(--space-md);border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-sm);font-size:0.8rem;color:var(--text-dim)}
+  .footer-social{display:flex;gap:10px;margin-top:var(--space-md);flex-wrap:wrap}
+  .footer-social a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-strong);color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1)}
+  .footer-social a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px}
+  ::selection{background:var(--accent);color:var(--bg)}
+  .text-center{text-align:center}.mt-lg{margin-top:var(--space-lg)}
+  .lang-toggle{padding:7px 12px;border:1px solid var(--border-strong);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1);margin-left:8px}
+  .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
+  .footer-credit a{color:var(--accent);border-bottom:1px solid var(--accent);transition:all 200ms cubic-bezier(0.22,1,0.36,1);padding-bottom:1px}
+  .footer-credit a:hover{color:var(--accent-bright);border-bottom-color:transparent}
+  .footer-credit a strong{font-weight:600}
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.45);z-index:90;transition:transform 200ms cubic-bezier(0.22,1,0.36,1)}
+  .whatsapp-float:hover{transform:scale(1.08)}
+  .whatsapp-float svg{width:30px;height:30px}
+  .whatsapp-float::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,0.4);animation:waPulse 2.4s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(0.95);opacity:1}100%{transform:scale(1.4);opacity:0}}
+  @media(max-width:768px){.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px}.whatsapp-float svg{width:26px;height:26px}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="brand-name">Firmin Sanou</span><span class="brand-sub">Sculpteur · Fondeur</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="portrait.html" class="nav-link">Portrait</a>
+        <a href="oeuvres.html" class="nav-link">Œuvres</a>
+        <a href="technique.html" class="nav-link">Cire perdue</a>
+        <a href="stages.html" class="nav-link active">Stages · Fonderie</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="en/stages.html" class="lang-toggle">EN</a>
+        <a href="boutique.html" class="nav-cta">Boutique</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Accueil</a><a href="portrait.html">Portrait</a><a href="oeuvres.html">Œuvres</a><a href="technique.html">Cire perdue</a><a href="stages.html">Stages · Fonderie</a><a href="contact.html">Contact</a><a href="en/stages.html">EN · English</a>
+    <a href="boutique.html">Boutique</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> · Stages & Fonderie</div>
+      <span class="eyebrow">Transmettre & créer</span>
+      <h1>Stages & <em>fonderie d'art</em></h1>
+      <p>Apprendre la cire perdue dans l'atelier, organiser une démonstration en festival, ou faire fondre votre œuvre en bronze.</p>
+    </div>
+  </header>
+
+  <!-- Stages intro -->
+  <section class="stage-hero">
+    <div class="container">
+      <div class="stage-hero-grid">
+        <div class="stage-hero-image">
+          <img src="images/divers/maitredufeu2.jpg" alt="Firmin Sanou et la fonte" loading="lazy">
+        </div>
+        <div class="stage-hero-text">
+          <span class="eyebrow">Stages d'initiation</span>
+          <h2>Apprendre <em style="color:var(--accent);font-style:italic">le geste</em></h2>
+          <p class="lead" style="margin:var(--space-md) 0 var(--space-lg)">Une expérience complète, du modelage de la cire à la coulée du bronze.</p>
+          <p>Chaque participant repart avec sa propre sculpture en bronze, d'environ <strong>1 kg</strong>, réalisée de ses mains selon la technique de la cire perdue.</p>
+          <p>Encadrés par Firmin Sanou en personne, les stages sont conçus pour transmettre l'essentiel du geste — la patience, la précision, le rapport au feu.</p>
+        </div>
+      </div>
+
+      <div class="formules-grid">
+        <div class="formule-card">
+          <span class="badge">Formule 1</span>
+          <h3>Stage intensif</h3>
+          <p style="margin-bottom:var(--space-md)"><strong style="color:var(--text)">4 séances de 2 heures</strong> + une demi-journée pour le dé-cirage et la fonte.</p>
+          <p style="color:var(--text-dim);font-size:0.95rem">Idéal pour découvrir l'ensemble du processus sur une période courte.</p>
+        </div>
+        <div class="formule-card">
+          <span class="badge">Formule 2</span>
+          <h3>Atelier hebdomadaire</h3>
+          <p style="margin-bottom:var(--space-md)"><strong style="color:var(--text)">2 à 3 heures par semaine</strong> + 5 heures pour la fonte finale.</p>
+          <p style="color:var(--text-dim);font-size:0.95rem">Format suivi sur plusieurs semaines pour approfondir le geste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:var(--space-xl)">
+        <span class="eyebrow">Le déroulé</span>
+        <h2 style="max-width:20ch;margin:0 auto var(--space-md)">Six étapes <em style="color:var(--accent);font-style:italic">de la matière</em></h2>
+        <p style="max-width:50ch;margin:0 auto">Vous traverserez chacune des phases qui font naître une sculpture en bronze.</p>
+      </div>
+      <ol class="process-list">
+        <li class="process-item"><strong>Modelage de la cire</strong><span>Donner forme à l'œuvre en cire d'abeille, avec ses détails et ses volumes.</span></li>
+        <li class="process-item"><strong>Réalisation des moules en argile</strong><span>Trois couches successives qui épousent la cire avec précision.</span></li>
+        <li class="process-item"><strong>Séchage progressif</strong><span>Plusieurs jours à l'air libre pour solidifier le moule.</span></li>
+        <li class="process-item"><strong>Dé-cirage</strong><span>La cire est chauffée et s'écoule du moule, libérant l'espace pour le métal.</span></li>
+        <li class="process-item"><strong>Fonte du bronze</strong><span>Fusion à 1800°, coulée à 800° dans le moule incandescent.</span></li>
+        <li class="process-item"><strong>Finitions</strong><span>Ponçage, ciselage et application de la patine pour révéler l'œuvre.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section class="pricing">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Tarifs</span>
+        <h2 style="max-width:20ch;margin:0 auto var(--space-md)">Accessible à <em style="color:var(--accent);font-style:italic">tous</em></h2>
+        <p style="max-width:50ch;margin:0 auto">À partir de 6 inscrits. Enfants à partir de 6 ans, adolescents, adultes et familles bienvenus.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="who">Enfants (jusqu'à 12 ans)</div>
+          <div class="price">200<span style="font-size:1.5rem"> €</span></div>
+          <div class="detail">Stage complet, tout matériel inclus. Sculpture finale ~1 kg de bronze à emporter.</div>
+        </div>
+        <div class="pricing-card">
+          <div class="who">Adultes</div>
+          <div class="price">350<span style="font-size:1.5rem"> €</span></div>
+          <div class="detail">Stage complet, tout matériel inclus. Sculpture finale ~1 kg de bronze à emporter.</div>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top:var(--space-lg);color:var(--text-muted);font-size:0.95rem"><em>Accompagnement individuel ou groupes spécifiques : sur devis. Nous contacter.</em></p>
+    </div>
+  </section>
+
+  <!-- Fonderie -->
+  <section class="fonderie" id="fonderie">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:var(--space-xl)">
+        <span class="eyebrow">Pour les pros</span>
+        <h2 style="max-width:24ch;margin:0 auto var(--space-md)">Fonderie <em style="color:var(--accent);font-style:italic">d'art</em></h2>
+        <p style="max-width:55ch;margin:0 auto">Pour les artistes, les institutions et les événements qui souhaitent faire vivre la magie de la fonte.</p>
+      </div>
+      <div class="fonderie-grid">
+        <article class="fonderie-card">
+          <span class="icon">✦</span>
+          <h3>Performance & démonstration</h3>
+          <p>Vous organisez un événement, un festival ? Faites vivre l'art de la fonte avec une démonstration en présence de l'artiste. Possibilité d'organiser un stage en amont avec les participants.</p>
+        </article>
+        <article class="fonderie-card">
+          <span class="icon">◈</span>
+          <h3>Fonte d'objets d'art</h3>
+          <p>Vous êtes artiste, sculpteur ou collectif et souhaitez fondre une œuvre en bronze ou en aluminium ? Firmin Sanou prend en charge la fonte de pièces uniques ou en édition, pour professionnels comme amateurs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA contact -->
+  <section class="cta-contact">
+    <div class="container">
+      <span class="eyebrow">Discuter d'un projet</span>
+      <h2>Parlons de <em>votre projet</em></h2>
+      <p>Pour réserver un stage, demander un devis ou organiser une performance, contactez Firmin directement.</p>
+      <a href="contact.html" class="btn btn-primary">Me contacter</a>
+      <div class="info-row">
+        <span><strong style="color:var(--text)">France </strong><a href="tel:+33767117040">+33 7 67 11 70 40</a></span>
+        <span><strong style="color:var(--text)">Burkina </strong><a href="tel:+22676494334">+226 76 49 43 34</a></span>
+        <span><strong style="color:var(--text)">Email </strong><a href="mailto:firminleonard.arts@gmail.com">firminleonard.arts@gmail.com</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><span class="brand-name">Firmin Sanou</span><span class="brand-sub">Sculpteur · Fondeur</span></a>
+          <p class="footer-tagline">Bronze, cire perdue, mémoire en mouvement. Atelier basé à Bobo Dioulasso, Burkina Faso.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+            <a href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg></a>
+            <a href="https://wa.me/22676494334" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg></a>
+          </div>
+        </div>
+        <div><h5>Naviguer</h5><ul><li><a href="portrait.html">Portrait</a></li><li><a href="oeuvres.html">Œuvres</a></li><li><a href="technique.html">Cire perdue</a></li><li><a href="stages.html">Stages</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Liens</h5><ul><li><a href="boutique.html">Boutique</a></li><li><a href="https://www.facebook.com/firmin.sanou.3" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/firmin.arts/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCkbxeXcwXUHiJdhmzbNaKWQ" target="_blank" rel="noopener">YouTube</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Firmin Sanou. Tous droits réservés.</span><span class="footer-credit">Site créé par <a href="https://amiro-dev.netlify.app" target="_blank" rel="noopener"><strong>Amir</strong>, dev freelance</a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleMenu(){document.querySelector('.nav-toggle').classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open');document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('open')?'hidden':'';}
+    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',toggleMenu));
+  </script>
+  <a href="https://wa.me/22676494334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contacter Firmin sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
+  </a>
+</body>
+</html>

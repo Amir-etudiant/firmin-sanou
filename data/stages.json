@@ -1,0 +1,43 @@
+{
+  "intro": "Firmin Sanou propose des stages d'initiation à la sculpture en bronze selon la technique de la cire perdue. Une expérience complète, du modelage à la coulée, autour d'une œuvre d'environ 1 kg que chaque participant emporte chez lui.",
+  "formules": [
+    {
+      "titre": "Stage intensif",
+      "description": "4 séances de 2 heures + une demi-journée pour le dé-cirage et la fonte.",
+      "detail": "Idéal pour découvrir l'ensemble du processus sur une période courte."
+    },
+    {
+      "titre": "Atelier hebdomadaire",
+      "description": "2 à 3 heures par semaine, plus 5 heures dédiées à la fonte.",
+      "detail": "Format suivi sur plusieurs semaines, idéal pour approfondir et perfectionner."
+    }
+  ],
+  "etapes": [
+    "Modelage de la cire",
+    "Réalisation des moules en argile (3 couches)",
+    "Séchage progressif",
+    "Dé-cirage : récupération de la cire fondue",
+    "Fonte : fusion à 1800°, coulage à 800°",
+    "Finitions : ponçage et patine"
+  ],
+  "public": "Enfants dès 6 ans, adolescents, adultes, familles. À partir de 6 inscrits.",
+  "tarifs": [
+    { "label": "Enfants (jusqu'à 12 ans)", "prix": "200 €" },
+    { "label": "Adultes", "prix": "350 €" }
+  ],
+  "note": "Accompagnement individuel sur devis. Nous contacter pour étudier votre projet.",
+  "fonderie": {
+    "titre": "Fonderie d'art",
+    "intro": "Pour les artistes, les institutions et les événements.",
+    "services": [
+      {
+        "titre": "Performance & démonstration",
+        "description": "Vous organisez un événement, un festival ? Faites vivre l'art de la fonte avec une démonstration en présence de l'artiste. Possibilité d'organiser un stage en amont."
+      },
+      {
+        "titre": "Fonte d'objets d'art",
+        "description": "Vous êtes artiste et souhaitez fondre une œuvre en bronze ou en aluminium ? Firmin Sanou réalise la fonte d'objets pour professionnels et amateurs."
+      }
+    ]
+  }
+}

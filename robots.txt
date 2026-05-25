@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /_scrape/
+
+Sitemap: https://firmin-sanou.netlify.app/sitemap.xml

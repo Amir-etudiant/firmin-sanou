@@ -1,0 +1,150 @@
+# Decap CMS — Configuration pour le site de Firmin Sanou
+# Documentation : https://decapcms.org/docs/
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Si tu préfères des aperçus en cours d'édition
+publish_mode: editorial_workflow
+
+# Dossier où Decap stockera les images uploadées
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Langue de l'interface
+locale: 'fr'
+
+# Logo affiché dans l'admin
+logo_url: /images/divers/portrait.jpg
+
+site_url: https://firminsanou.com
+display_url: https://firminsanou.com
+
+# ===========================================
+# COLLECTIONS — Les contenus que l'admin peut modifier
+# ===========================================
+collections:
+
+  # --- Œuvres (sculptures) ---
+  - name: "oeuvres"
+    label: "Œuvres"
+    label_singular: "Œuvre"
+    description: "Liste des sculptures affichées dans la galerie."
+    files:
+      - file: "data/oeuvres.json"
+        label: "Toutes les œuvres"
+        name: "oeuvres"
+        fields:
+          - label: "Œuvres"
+            name: "oeuvres"
+            widget: "list"
+            label_singular: "Œuvre"
+            summary: "{{fields.titre}} — {{fields.annee}}"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Année", name: "annee", widget: "number", value_type: "int", min: 2000, max: 2100, required: false }
+              - { label: "Taille (ex: 45 cm)", name: "taille", widget: "string", required: false }
+              - { label: "Catégorie", name: "categorie", widget: "select", options: ["Figure", "Portrait", "Groupe", "Masque", "Animalier", "Objet"], default: "Figure" }
+              - { label: "Photo", name: "image", widget: "image", media_folder: "/images/oeuvres", public_folder: "images/oeuvres" }
+              - { label: "Description (facultatif)", name: "description", widget: "text", required: false }
+
+  # --- Expositions ---
+  - name: "expositions"
+    label: "Expositions"
+    label_singular: "Exposition"
+    description: "Expositions passées et à venir."
+    files:
+      - file: "data/expositions.json"
+        label: "Liste des expositions"
+        name: "expositions"
+        fields:
+          - label: "Expositions"
+            name: "expositions"
+            widget: "list"
+            label_singular: "Exposition"
+            summary: "{{fields.titre}} — {{fields.date_affichage}}"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Lieu", name: "lieu", widget: "string" }
+              - { label: "Date affichée (ex: Octobre 2023)", name: "date_affichage", widget: "string" }
+              - { label: "Date de tri (format YYYY-MM)", name: "date_tri", widget: "string", hint: "Utilisé pour trier — ex: 2023-10" }
+              - { label: "Affiche / Image", name: "image", widget: "image", media_folder: "/images/expositions", public_folder: "images/expositions" }
+              - { label: "Type", name: "type", widget: "select", options: ["Exposition personnelle", "Exposition collective", "Événement", "Commande publique"], required: false }
+              - { label: "Description (facultatif)", name: "description", widget: "text", required: false }
+
+  # --- Partenaires ---
+  - name: "partenaires"
+    label: "Partenaires"
+    label_singular: "Partenaire"
+    description: "Logos et liens des partenaires affichés en bas de la page Contact."
+    files:
+      - file: "data/partenaires.json"
+        label: "Liste des partenaires"
+        name: "partenaires"
+        fields:
+          - label: "Partenaires"
+            name: "partenaires"
+            widget: "list"
+            label_singular: "Partenaire"
+            summary: "{{fields.nom}}"
+            fields:
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Logo", name: "image", widget: "image", media_folder: "/images/partenaires", public_folder: "images/partenaires" }
+              - { label: "Lien (site web ou Facebook)", name: "lien", widget: "string" }
+              - { label: "Description (facultatif)", name: "description", widget: "string", required: false }
+
+  # --- Paramètres du site ---
+  - name: "settings"
+    label: "Paramètres du site"
+    description: "Coordonnées de contact, réseaux sociaux, textes d'accueil."
+    files:
+      - file: "data/settings.json"
+        label: "Paramètres"
+        name: "settings"
+        fields:
+          - label: "Coordonnées de contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Téléphone France 1", name: "france_tel_1", widget: "string" }
+              - { label: "Téléphone France 2", name: "france_tel_2", widget: "string" }
+              - { label: "Téléphone Burkina", name: "burkina_tel", widget: "string" }
+              - { label: "WhatsApp (numéro sans + ni espaces)", name: "whatsapp", widget: "string" }
+              - { label: "Adresse Burkina", name: "burkina_adresse", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Réseaux sociaux"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook (URL)", name: "facebook", widget: "string" }
+              - { label: "Instagram (URL)", name: "instagram", widget: "string" }
+              - { label: "YouTube (URL)", name: "youtube", widget: "string" }
+              - { label: "Boutique en ligne (URL)", name: "boutique", widget: "string" }
+          - label: "Page d'accueil — Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Image de fond du hero", name: "image", widget: "image", media_folder: "/images/oeuvres", public_folder: "images/oeuvres" }
+              - { label: "Titre — première ligne", name: "titre_avant", widget: "string", hint: "ex: 'Le bronze,'" }
+              - { label: "Titre — deuxième ligne (en doré)", name: "titre_apres", widget: "string", hint: "ex: 'langage de l'âme.'" }
+              - { label: "Sous-titre", name: "tagline", widget: "text" }
+              - { label: "Méta 1", name: "meta_1", widget: "string" }
+              - { label: "Méta 2", name: "meta_2", widget: "string" }
+              - { label: "Méta 3", name: "meta_3", widget: "string" }
+          - label: "Bloc intro / portrait"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Photo de Firmin", name: "image", widget: "image", media_folder: "/images/divers", public_folder: "images/divers" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titre — première partie", name: "titre_avant", widget: "string" }
+              - { label: "Titre — partie en doré (italique)", name: "titre_apres", widget: "string" }
+              - { label: "Citation (lead)", name: "lead", widget: "string" }
+              - { label: "Paragraphe biographique", name: "texte", widget: "text" }
+              - { label: "Stat 1 — Nombre", name: "stat_1_num", widget: "string" }
+              - { label: "Stat 1 — Légende", name: "stat_1_lbl", widget: "string" }
+              - { label: "Stat 2 — Nombre", name: "stat_2_num", widget: "string" }
+              - { label: "Stat 2 — Légende", name: "stat_2_lbl", widget: "string" }
+              - { label: "Stat 3 — Nombre", name: "stat_3_num", widget: "string" }
+              - { label: "Stat 3 — Légende", name: "stat_3_lbl", widget: "string" }
