@@ -166,9 +166,10 @@
   .gallery-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
   @media(min-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
   @media(min-width:1024px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
-  .oeuvre-card{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bg-card);cursor:pointer;transition:transform var(--t-med) var(--ease)}
-  .oeuvre-card img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease),filter var(--t-med) var(--ease)}
-  .oeuvre-card:hover img{transform:scale(1.05);filter:brightness(1.05)}
+  .oeuvre-card{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bg-card);cursor:pointer;transition:transform 400ms cubic-bezier(0.22,1,0.36,1),box-shadow 400ms cubic-bezier(0.22,1,0.36,1)}
+  .oeuvre-card:hover{transform:translateY(-6px);box-shadow:0 22px 60px -12px rgba(139,111,71,0.35),0 0 0 1px rgba(230,200,154,0.5)}
+  .oeuvre-card img{width:100%;height:100%;object-fit:cover;transition:transform 800ms cubic-bezier(0.22,1,0.36,1),filter 400ms cubic-bezier(0.22,1,0.36,1)}
+  .oeuvre-card:hover img{transform:scale(1.06);filter:brightness(1.06) saturate(1.08)}
   .oeuvre-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(12,10,8,0.6) 60%,rgba(12,10,8,0.95) 100%);display:flex;align-items:flex-end;padding:var(--space-lg);opacity:0;transition:opacity 350ms cubic-bezier(0.22,1,0.36,1)}
   .oeuvre-card:hover .oeuvre-overlay{opacity:1}
   .oeuvre-info{transform:translateY(8px);transition:transform 450ms cubic-bezier(0.22,1,0.36,1)}
@@ -229,6 +230,42 @@
   .social-link{width:44px;height:44px;border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;transition:all var(--t-fast) var(--ease)}
   .social-link:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
   .social-link svg{width:18px;height:18px}
+
+  /* === Section Atelier === */
+  .atelier{background:var(--bg-soft);position:relative;overflow:hidden}
+  .atelier-head{text-align:center;margin-bottom:var(--space-xl)}
+  .atelier-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:8px}
+  @media(max-width:767px){.atelier-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}}
+  .atelier-item{position:relative;overflow:hidden;cursor:pointer;background:var(--bg-card)}
+  .atelier-item img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(0.22,1,0.36,1),filter 400ms ease}
+  .atelier-item:hover img{transform:scale(1.08);filter:brightness(1.1) saturate(1.1)}
+  .atelier-item::after{content:attr(data-caption);position:absolute;left:14px;bottom:14px;font-family:var(--font-display);font-style:italic;font-size:0.95rem;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.6);opacity:0;transform:translateY(8px);transition:all 350ms cubic-bezier(0.22,1,0.36,1);z-index:2}
+  .atelier-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,10,8,0.65) 100%);opacity:0;transition:opacity 350ms;z-index:1}
+  .atelier-item:hover::after,.atelier-item:hover::before{opacity:1;transform:translateY(0)}
+  .atelier-item.span-2c{grid-column:span 2}
+  .atelier-item.span-3c{grid-column:span 3}
+  .atelier-item.span-2r{grid-row:span 2}
+  @media(max-width:767px){.atelier-item.span-2c{grid-column:span 1}.atelier-item.span-3c{grid-column:span 2}.atelier-item.span-2r{grid-row:span 1}}
+
+  /* === Comparateur cire / bronze === */
+  .comparator-wrap{position:relative;max-width:1000px;margin:0 auto;aspect-ratio:16/10;background:var(--bg-elevated);overflow:hidden;border:1px solid var(--border);cursor:ew-resize;user-select:none;-webkit-user-select:none}
+  .comparator-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+  .comparator-img.b{clip-path:inset(0 0 0 50%)}
+  .comparator-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:linear-gradient(180deg,rgba(230,200,154,0),#e6c89a 30%,#e6c89a 70%,rgba(230,200,154,0));transform:translateX(-1px);pointer-events:none;z-index:3}
+  .comparator-circle{position:absolute;top:50%;left:50%;width:54px;height:54px;border-radius:50%;background:#0c0a08;border:2px solid #e6c89a;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;color:#e6c89a;font-size:1.2rem;pointer-events:none;z-index:4;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+  .comparator-label{position:absolute;top:18px;padding:6px 14px;font-family:var(--font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#fff;background:rgba(12,10,8,0.7);backdrop-filter:blur(6px);z-index:2;pointer-events:none}
+  .comparator-label.a{left:18px}
+  .comparator-label.b{right:18px;color:#e6c89a}
+
+  /* === Mosaïque expos territoires === */
+  .territoires{background:var(--bg)}
+  .territoires-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-md);margin-top:var(--space-xl);max-width:1100px;margin-left:auto;margin-right:auto}
+  .territoire{padding:var(--space-md);background:var(--bg-card);border:1px solid var(--border);text-align:center;transition:all 300ms cubic-bezier(0.22,1,0.36,1);position:relative}
+  .territoire:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 40px -10px rgba(139,111,71,0.25)}
+  .territoire .flag{font-size:1.8rem;margin-bottom:6px;display:block}
+  .territoire .city{font-family:var(--font-display);font-size:1.2rem;font-style:italic;color:var(--text);margin-bottom:4px}
+  .territoire .country{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim)}
+  .territoire .years{margin-top:8px;font-size:0.75rem;color:var(--accent);font-family:var(--font-body);letter-spacing:0.1em}
 
   /* Footer */
   .footer{background:var(--bg);border-top:1px solid var(--border);padding:var(--space-xl) 0 var(--space-md)}
@@ -460,6 +497,45 @@
     </div>
   </section>
 
+  <!-- Comparateur cire / bronze -->
+  <section style="background:var(--bg-elevated)">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow reveal">La transformation</span>
+        <h2 class="reveal reveal-delay-1">De la matière <em>au bronze</em></h2>
+        <p class="reveal reveal-delay-2">Glisse le curseur pour découvrir comment une sculpture brute, sombre et martelée, devient une œuvre finie en bronze doré poli.</p>
+      </div>
+      <div class="comparator-wrap reveal" id="comparator">
+        <img class="comparator-img a" src="images/oeuvres/Le-Bagnard-2018.jpg" alt="Sculpture brute, non finie">
+        <img class="comparator-img b" id="comparator-b" src="images/oeuvres/2010-La-Noblesse-45cm.jpg" alt="Sculpture finie en bronze doré">
+        <span class="comparator-label a">Brut · patine sombre</span>
+        <span class="comparator-label b">Fini · bronze doré</span>
+        <div class="comparator-handle" id="comparator-handle">
+          <div class="comparator-circle">⇆</div>
+        </div>
+      </div>
+      <p class="reveal" style="text-align:center;margin-top:var(--space-md);font-size:0.85rem;color:var(--text-dim);font-style:italic">Démonstration de finitions différentes. Quand Firmin enverra des photos avant/après d'une même sculpture, on les branchera ici.</p>
+    </div>
+  </section>
+
+  <!-- Section Dans l'atelier -->
+  <section class="atelier">
+    <div class="container">
+      <div class="atelier-head">
+        <span class="eyebrow reveal">Dans l'atelier</span>
+        <h2 class="reveal reveal-delay-1">Le geste, <em style="color:var(--accent);font-style:italic">en coulisses</em></h2>
+        <p class="reveal reveal-delay-2" style="max-width:50ch;margin:var(--space-md) auto 0">Du four artisanal à la finition d'une pièce, l'envers du décor d'une coulée de bronze.</p>
+      </div>
+      <div class="atelier-grid reveal reveal-delay-2">
+        <div class="atelier-item span-3c span-2r" data-caption="Maître du feu"><img src="images/divers/maitredufeu2.jpg" alt="Firmin au four" loading="lazy"></div>
+        <div class="atelier-item span-3c" data-caption="La coulée"><img src="images/divers/Fonte-Carbet-des-associations-2019.jpg" alt="Coulée de bronze" loading="lazy"></div>
+        <div class="atelier-item span-2c" data-caption="Fabrication du four"><img src="images/divers/Fabrication-du-four-Apatou-2.jpg" alt="Le four en construction" loading="lazy"></div>
+        <div class="atelier-item span-2c" data-caption="Finitions à la main"><img src="images/divers/Finition-Apatou.jpg" alt="Finitions" loading="lazy"></div>
+        <div class="atelier-item span-2c" data-caption="Fonte aluminium"><img src="images/divers/Aluminium-Carma.jpg" alt="Fonte aluminium" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Galerie œuvres -->
   <section class="gallery-section">
     <div class="container">
@@ -548,6 +624,31 @@
             <p class="expo-description">Mise en lumière de la culture africaine à travers le bronze.</p>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Territoires (mosaïque expos) -->
+  <section class="territoires">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow reveal">Territoires</span>
+        <h2 class="reveal reveal-delay-1">Trois continents, <em style="color:var(--accent);font-style:italic">une seule main</em></h2>
+        <p class="reveal reveal-delay-2">Les sculptures de Firmin ont voyagé. Voici les villes où elles se sont posées.</p>
+      </div>
+      <div class="territoires-grid reveal reveal-delay-2">
+        <div class="territoire"><span class="flag">🇧🇫</span><div class="city">Bobo Dioulasso</div><div class="country">Burkina Faso</div><div class="years">depuis 2004</div></div>
+        <div class="territoire"><span class="flag">🇧🇫</span><div class="city">Ouagadougou</div><div class="country">Burkina Faso</div><div class="years">2006 – 2010</div></div>
+        <div class="territoire"><span class="flag">🇧🇪</span><div class="city">Bruxelles</div><div class="country">Belgique</div><div class="years">2005</div></div>
+        <div class="territoire"><span class="flag">🇸🇮</span><div class="city">Ljubljana</div><div class="country">Slovénie</div><div class="years">2008 – 2009</div></div>
+        <div class="territoire"><span class="flag">🇬🇭</span><div class="city">Accra</div><div class="country">Ghana</div><div class="years">2013</div></div>
+        <div class="territoire"><span class="flag">🇫🇷</span><div class="city">Lyon</div><div class="country">France</div><div class="years">2013 – 2014</div></div>
+        <div class="territoire"><span class="flag">🇫🇷</span><div class="city">Paris</div><div class="country">France</div><div class="years">2016</div></div>
+        <div class="territoire"><span class="flag">🇬🇫</span><div class="city">Saint-Laurent</div><div class="country">Guyane</div><div class="years">2017 – 2019</div></div>
+        <div class="territoire"><span class="flag">🇸🇷</span><div class="city">Paramaribo</div><div class="country">Surinam</div><div class="years">2018</div></div>
+        <div class="territoire"><span class="flag">🇫🇷</span><div class="city">Bordeaux</div><div class="country">France</div><div class="years">2022</div></div>
+        <div class="territoire"><span class="flag">🇫🇷</span><div class="city">Vallauris</div><div class="country">France</div><div class="years">2023</div></div>
+        <div class="territoire" style="border-color:var(--accent);background:linear-gradient(180deg,rgba(139,111,71,0.08),transparent)"><span class="flag">🇫🇷</span><div class="city">Antibes</div><div class="country">France · atelier</div><div class="years">aujourd'hui</div></div>
       </div>
     </div>
   </section>
@@ -738,6 +839,62 @@
     // Hero video : force play
     const heroVideo = document.querySelector('.hero-video');
     if (heroVideo) heroVideo.play().catch(() => {});
+
+    // Comparateur cire / bronze
+    (function(){
+      const wrap=document.getElementById('comparator');
+      const b=document.getElementById('comparator-b');
+      const handle=document.getElementById('comparator-handle');
+      if(!wrap||!b||!handle) return;
+      function setPos(pct){
+        pct=Math.max(0,Math.min(100,pct));
+        b.style.clipPath='inset(0 0 0 '+pct+'%)';
+        handle.style.left=pct+'%';
+      }
+      setPos(50);
+      let dragging=false;
+      function move(x){
+        const r=wrap.getBoundingClientRect();
+        setPos(((x-r.left)/r.width)*100);
+      }
+      wrap.addEventListener('mousedown',e=>{dragging=true;move(e.clientX);e.preventDefault();});
+      window.addEventListener('mouseup',()=>dragging=false);
+      window.addEventListener('mousemove',e=>{if(dragging)move(e.clientX);});
+      wrap.addEventListener('touchstart',e=>{dragging=true;move(e.touches[0].clientX);},{passive:true});
+      window.addEventListener('touchend',()=>dragging=false);
+      window.addEventListener('touchmove',e=>{if(dragging)move(e.touches[0].clientX);},{passive:true});
+      // Hover preview
+      wrap.addEventListener('mousemove',e=>{if(!dragging)move(e.clientX);});
+    })();
+
+    // Animation des stats (compteur)
+    (function(){
+      const stats=document.querySelectorAll('.intro-stat .num');
+      const targetMap={'1982':1982,'10 ans':10,'20+':20};
+      const observer=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(!e.isIntersecting) return;
+          const el=e.target;
+          const finalText=el.textContent.trim();
+          const targetNum=parseInt(finalText.match(/\d+/)?.[0]||'0',10);
+          if(!targetNum) return;
+          const suffix=finalText.replace(/\d+/,'');
+          const duration=1800;
+          const start=performance.now();
+          const animate=now=>{
+            const t=Math.min(1,(now-start)/duration);
+            const eased=1-Math.pow(1-t,3);
+            const val=Math.floor(eased*targetNum);
+            el.textContent=val+suffix;
+            if(t<1) requestAnimationFrame(animate);
+            else el.textContent=finalText;
+          };
+          requestAnimationFrame(animate);
+          observer.unobserve(el);
+        });
+      },{threshold:0.5});
+      stats.forEach(s=>observer.observe(s));
+    })();
 
     // Navbar scroll
     const nav = document.querySelector('.navbar');
