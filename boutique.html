@@ -11,9 +11,8 @@
   <link rel="icon" type="image/png" href="images/divers/portrait.jpg">
 
   <meta property="og:title" content="Boutique — Sculptures Firmin Sanou">
-  <meta property="og:description" content="Sculptures en bronze à vendre, coulées à la cire perdue. Pièces uniques.">
+  <meta property="og:description" content="Salle d'exposition virtuelle. Sculptures en bronze à vendre.">
   <meta property="og:image" content="images/oeuvres/2010-La-Noblesse-45cm.jpg">
-  <meta property="og:type" content="website">
 
   <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -23,7 +22,7 @@
   button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   a{color:inherit;text-decoration:none}
   ul{list-style:none}
-  :root{--bg:#faf7f2;--bg-elevated:#f3ede1;--bg-soft:#eae0cd;--bg-card:#ffffff;--text:#1a1612;--text-muted:#5a5046;--text-dim:#8a8275;--accent:#8b6f47;--accent-bright:#b8945e;--accent-deep:#5e4a2e;--border:rgba(26,22,18,0.1);--border-strong:rgba(26,22,18,0.18);--font-display:'Cormorant Garamond','Times New Roman',serif;--font-body:'Inter',-apple-system,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-2xl:6rem;--space-3xl:9rem;--container:1280px;--ease:cubic-bezier(0.22,1,0.36,1);--t-fast:200ms;--t-med:400ms}
+  :root{--bg:#0a0806;--bg-elevated:#14100c;--bg-soft:#1a1410;--bg-card:#14100c;--text:#f3eee5;--text-muted:#a09a8e;--text-dim:#6b6358;--accent:#c9a574;--accent-bright:#e6c89a;--accent-deep:#8b6f47;--border:rgba(230,200,154,0.08);--border-strong:rgba(230,200,154,0.18);--font-display:'Cormorant Garamond','Times New Roman',serif;--font-body:'Inter',-apple-system,sans-serif;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-2xl:6rem;--space-3xl:9rem;--container:1280px;--ease:cubic-bezier(0.22,1,0.36,1);--t-fast:200ms;--t-med:400ms}
   body{font-size:16px}
   h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
   h1{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:300}
@@ -31,13 +30,11 @@
   h3{font-size:clamp(1.4rem,2.5vw,1.85rem)}
   p{color:var(--text-muted)}
   .eyebrow{display:inline-block;font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-md)}
-  .lead{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:300;line-height:1.5;color:var(--text);font-style:italic}
   .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
   @media(min-width:768px){.container{padding:0 var(--space-xl)}}
   section{padding:var(--space-2xl) 0}
   @media(min-width:768px){section{padding:var(--space-3xl) 0}}
-
-  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--space-md) 0;background:rgba(250,247,242,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--space-md) 0;background:rgba(10,8,6,0.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
   .nav-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
   @media(min-width:768px){.nav-inner{padding:0 var(--space-xl)}}
   .brand{font-family:var(--font-display);font-size:1.5rem;color:var(--text);display:flex;flex-direction:column;line-height:1}
@@ -67,7 +64,7 @@
   .lang-toggle{padding:7px 12px;border:1px solid var(--border-strong);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1);margin-left:8px}
   .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
 
-  .page-header{padding-top:calc(80px + var(--space-2xl));padding-bottom:var(--space-xl);background:var(--bg);position:relative}
+  .page-header{padding-top:calc(80px + var(--space-2xl));padding-bottom:var(--space-xl)}
   .page-header-inner{max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
   @media(min-width:768px){.page-header-inner{padding:0 var(--space-xl)}}
   .page-header h1{margin-bottom:var(--space-md);max-width:18ch}
@@ -75,51 +72,103 @@
   .page-header p{font-size:1.1rem;max-width:55ch}
   .breadcrumb{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:var(--space-md)}
 
+  /* ===== LE COFFRE — scroll vertical, plein écran par pièce ===== */
+  .vault{position:relative;background:#0a0806}
+
+  /* Chaque pièce = section pleine hauteur, image + texte côte à côte */
+  .vault-panel{position:relative;min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(2rem,6vw,6rem);padding:var(--space-2xl) clamp(2rem,7vw,7rem);scroll-snap-align:start;overflow:hidden;cursor:pointer;border-bottom:1px solid rgba(230,200,154,0.06)}
+  .vault-panel:last-child{border-bottom:none}
+  .vault-panel:nth-child(even){grid-template-columns:1fr 1.1fr}
+  .vault-panel:nth-child(even) .vault-piece{order:2}
+  .vault-panel:nth-child(even) .vault-meta{order:1;text-align:right}
+  @media(max-width:900px){
+    .vault-panel,.vault-panel:nth-child(even){grid-template-columns:1fr;padding:var(--space-xl) var(--space-md);gap:var(--space-xl);min-height:auto;padding-top:calc(80px + var(--space-lg))}
+    .vault-panel:nth-child(even) .vault-piece{order:0}
+    .vault-panel:nth-child(even) .vault-meta{order:1;text-align:left}
+  }
+
+  /* Chiffre romain GÉANT en watermark — derrière tout */
+  .vault-numeral{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(18rem,55vh,38rem);color:rgba(230,200,154,0.035);line-height:0.8;pointer-events:none;user-select:none;letter-spacing:-0.05em;z-index:0;text-shadow:0 0 100px rgba(230,200,154,0.03)}
+
+  /* Spot doré derrière l'image */
+  .vault-spot{position:absolute;top:0;bottom:0;width:55%;left:0;background:radial-gradient(ellipse 60% 70% at 40% 50%,rgba(255,220,160,0.08) 0%,rgba(255,200,130,0.025) 40%,transparent 75%);pointer-events:none;z-index:1}
+  .vault-panel:nth-child(even) .vault-spot{left:auto;right:0;background:radial-gradient(ellipse 60% 70% at 60% 50%,rgba(255,220,160,0.08) 0%,rgba(255,200,130,0.025) 40%,transparent 75%)}
+
+  /* Image — propre, drop-shadow doré */
+  .vault-piece{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;max-height:80vh}
+  .vault-piece img{display:block;width:auto;max-width:100%;max-height:75vh;object-fit:contain;filter:drop-shadow(0 25px 50px rgba(0,0,0,0.7)) drop-shadow(0 50px 100px rgba(201,165,116,0.08));transition:transform 700ms cubic-bezier(0.22,1,0.36,1)}
+  .vault-panel:hover .vault-piece img{transform:scale(1.02)}
+
+  /* Texte — propre, séparé, lisible */
+  .vault-meta{position:relative;z-index:2;max-width:480px}
+  .vault-meta .num-label{display:flex;align-items:center;gap:var(--space-sm);font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-lg);font-weight:500}
+  .vault-meta .num-label::before{content:'';width:40px;height:1px;background:var(--accent)}
+  .vault-panel:nth-child(even) .vault-meta .num-label{justify-content:flex-end}
+  .vault-panel:nth-child(even) .vault-meta .num-label::before{order:2}
+  .vault-meta h3{font-family:var(--font-display);font-size:clamp(2.8rem,6vw,5rem);font-style:italic;font-weight:300;color:var(--text);line-height:0.95;margin-bottom:var(--space-md);letter-spacing:-0.02em}
+  .vault-meta h3 em{color:var(--accent-bright);font-style:italic}
+  .vault-meta .lead{font-family:var(--font-display);font-style:italic;font-size:1.3rem;color:var(--text-muted);line-height:1.55;margin-bottom:var(--space-lg);font-weight:300}
+  .vault-meta-specs{display:flex;flex-direction:column;gap:6px;padding:var(--space-md) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:var(--space-lg)}
+  .vault-panel:nth-child(even) .vault-meta-specs{align-items:flex-end}
+  .vault-meta-specs .row{display:flex;gap:var(--space-md);font-size:0.85rem;color:var(--text-muted);font-family:var(--font-body)}
+  .vault-meta-specs .row strong{color:var(--text-dim);text-transform:uppercase;letter-spacing:0.15em;font-size:0.7rem;font-weight:500;min-width:80px}
+  .vault-panel:nth-child(even) .vault-meta-specs .row{flex-direction:row-reverse}
+  .vault-meta .price-row{display:flex;align-items:baseline;gap:var(--space-md);margin-bottom:var(--space-lg)}
+  .vault-panel:nth-child(even) .vault-meta .price-row{justify-content:flex-end}
+  .vault-meta .price{font-family:var(--font-display);font-size:2.6rem;color:var(--accent-bright);font-weight:400;letter-spacing:0.02em;line-height:1}
+  .vault-meta .price small{font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);font-weight:500;display:block;margin-bottom:6px}
+  .vault-acquire{display:inline-flex;align-items:center;gap:var(--space-sm);padding:16px 32px;background:var(--accent);color:#0a0806;font-size:0.85rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;border:none;cursor:pointer;transition:all var(--t-fast) var(--ease);font-family:var(--font-body)}
+  .vault-acquire:hover{background:var(--accent-bright);transform:translateX(4px)}
+  .vault-acquire::after{content:'→';font-size:1.1rem;font-weight:400}
+
+  /* Compteur fixe en haut à droite de la page (pendant le scroll vault) */
+  .vault-counter-fixed{position:fixed;top:50%;right:24px;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:14px;pointer-events:auto}
+  .vault-counter-fixed a{display:block;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-style:italic;font-size:0.85rem;color:var(--text-dim);border:1px solid transparent;transition:all 250ms cubic-bezier(0.22,1,0.36,1);position:relative}
+  .vault-counter-fixed a:hover{color:var(--accent-bright)}
+  .vault-counter-fixed a.active{color:var(--accent-bright);border-color:var(--accent);font-size:1rem}
+  .vault-counter-fixed a::before{content:'';position:absolute;left:-16px;top:50%;width:8px;height:1px;background:var(--text-dim);opacity:0;transition:opacity 200ms ease}
+  .vault-counter-fixed a.active::before{opacity:1;background:var(--accent-bright);width:12px}
+  @media(max-width:900px){.vault-counter-fixed{display:none}}
+
+  /* Modal détail œuvre */
+  .art-modal{position:fixed;inset:0;background:rgba(12,10,8,0.92);backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center;padding:var(--space-md);overflow-y:auto}
+  .art-modal.open{display:flex}
+  .art-modal-content{max-width:1100px;width:100%;background:#fff;display:grid;grid-template-columns:1fr;gap:0;position:relative;border:1px solid #8b6f47;box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+  @media(min-width:900px){.art-modal-content{grid-template-columns:1.1fr 1fr}}
+  .art-modal-image{background:#0c0a08;display:flex;align-items:center;justify-content:center;min-height:400px;max-height:80vh}
+  .art-modal-image img{max-width:100%;max-height:80vh;object-fit:contain}
+  .art-modal-info{padding:var(--space-xl);display:flex;flex-direction:column}
+  .art-modal-info .num{font-family:var(--font-display);font-style:italic;font-size:0.9rem;color:var(--accent);letter-spacing:0.15em;margin-bottom:var(--space-sm)}
+  .art-modal-info h3{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-style:italic;font-weight:300;margin-bottom:var(--space-md);color:#1a1612;line-height:1.05}
+  .art-modal-info .description{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:#5a5046;line-height:1.6;margin-bottom:var(--space-lg)}
+  .art-modal-meta{display:grid;grid-template-columns:max-content 1fr;gap:var(--space-sm) var(--space-md);padding:var(--space-md) 0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1);font-size:0.9rem;margin-bottom:var(--space-lg)}
+  .art-modal-meta dt{color:var(--text-dim);text-transform:uppercase;font-size:0.7rem;letter-spacing:0.18em;font-weight:500}
+  .art-modal-meta dd{color:#1a1612;font-family:var(--font-display);font-style:italic;font-size:1.05rem}
+  .art-modal-price{font-family:var(--font-display);font-size:2.4rem;color:var(--accent);font-weight:500;margin-bottom:var(--space-md)}
+  .art-modal-price small{font-size:0.75rem;font-family:var(--font-body);color:var(--text-dim);letter-spacing:0.15em;display:block;text-transform:uppercase;font-weight:500}
+  .art-modal-buy{padding:16px 28px;background:var(--accent);color:#fff;font-size:0.85rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background var(--t-fast) var(--ease);border:none}
+  .art-modal-buy:hover{background:var(--accent-bright)}
+  .art-modal-close{position:absolute;top:14px;right:14px;width:44px;height:44px;background:rgba(255,255,255,0.95);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--accent);cursor:pointer;z-index:5;transition:all var(--t-fast) var(--ease)}
+  .art-modal-close:hover{background:var(--accent);color:#fff}
+
   /* Trust banner */
-  .trust-banner{background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-md) 0}
-  .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-lg);font-size:0.85rem;color:var(--text-muted);max-width:var(--container);margin:0 auto;padding:0 var(--space-md);text-align:center}
+  .trust-banner{background:#0c0a08;padding:var(--space-md) 0;color:#e6c89a}
+  .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-lg);font-size:0.85rem;max-width:var(--container);margin:0 auto;padding:0 var(--space-md);text-align:center}
   .trust-item{display:flex;align-items:center;gap:8px}
-  .trust-item strong{color:var(--text);font-weight:500}
+  .trust-item strong{color:#fff;font-weight:500}
   .trust-item .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
-
-  /* Shop grid */
-  .shop-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg)}
-  @media(min-width:700px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(min-width:1100px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
-
-  .product-card{background:var(--bg-card);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
-  .product-card:hover{transform:translateY(-6px);border-color:var(--accent)}
-  .product-image{aspect-ratio:1/1;overflow:hidden;background:var(--bg-soft);position:relative}
-  .product-image img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-med) var(--ease)}
-  .product-card:hover .product-image img{transform:scale(1.04)}
-  .product-badge{position:absolute;top:14px;left:14px;padding:5px 12px;font-family:var(--font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:var(--accent);z-index:2}
-  .product-badge.sold{background:var(--text-dim);color:#fff}
-  .product-badge.unique{background:var(--text);color:var(--bg)}
-  .product-info{padding:var(--space-lg);flex-grow:1;display:flex;flex-direction:column}
-  .product-eyebrow{font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-xs);font-weight:500}
-  .product-title{font-family:var(--font-display);font-size:1.85rem;font-weight:400;font-style:italic;margin-bottom:var(--space-xs);line-height:1.05;color:var(--text)}
-  .product-meta{display:flex;flex-wrap:wrap;gap:var(--space-sm);font-size:0.85rem;color:var(--text-muted);padding:var(--space-sm) 0;margin-bottom:var(--space-md);border-bottom:1px solid var(--border)}
-  .product-meta span{display:inline-flex;align-items:center;gap:5px}
-  .product-meta span strong{color:var(--text);font-weight:500}
-  .product-desc{font-size:0.95rem;color:var(--text-muted);margin-bottom:var(--space-lg);font-style:italic;font-family:var(--font-display);font-weight:300;line-height:1.55;flex-grow:1}
-  .product-bottom{display:flex;justify-content:space-between;align-items:center;gap:var(--space-md)}
-  .product-price{font-family:var(--font-display);font-size:2rem;color:var(--accent);font-weight:500;line-height:1}
-  .product-price small{font-size:0.7rem;font-family:var(--font-body);letter-spacing:0.15em;color:var(--text-dim);text-transform:uppercase;font-weight:500;display:block;margin-top:2px}
-  .product-buy{padding:12px 20px;background:var(--accent);color:var(--bg);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background var(--t-fast) var(--ease);white-space:nowrap}
-  .product-buy:hover{background:var(--accent-bright)}
-  .product-buy.sold{background:var(--text-dim);cursor:not-allowed}
-  .product-buy.sold:hover{background:var(--text-dim)}
 
   /* Custom order */
   .custom-order{background:var(--bg-elevated)}
   .custom-grid{display:grid;grid-template-columns:1fr;gap:var(--space-xl);align-items:center}
   @media(min-width:768px){.custom-grid{grid-template-columns:1fr 1fr;gap:var(--space-2xl)}}
-  .custom-image{aspect-ratio:4/5;overflow:hidden;position:relative}
+  .custom-image{aspect-ratio:4/5;overflow:hidden}
   .custom-image img{width:100%;height:100%;object-fit:cover}
   .custom-text h2{margin-bottom:var(--space-md)}
   .custom-text h2 em{color:var(--accent);font-style:italic}
   .custom-text p{font-size:1.05rem;line-height:1.7;margin-bottom:var(--space-md)}
   .custom-text strong{color:var(--text);font-weight:500}
+  .lead{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:300;line-height:1.5;color:var(--text);font-style:italic}
 
   /* FAQ */
   .faq-list{max-width:760px;margin:0 auto;display:grid;gap:var(--space-md)}
@@ -128,10 +177,6 @@
   .faq-item h4{font-family:var(--font-display);font-size:1.3rem;font-style:italic;font-weight:400;margin-bottom:var(--space-xs);color:var(--text)}
   .faq-item p{font-size:0.95rem;line-height:1.6}
   .faq-item p strong{color:var(--text);font-weight:500}
-
-  /* Stripe note placeholder */
-  .stripe-note{max-width:760px;margin:var(--space-xl) auto 0;padding:var(--space-md) var(--space-lg);background:rgba(139,111,71,0.06);border:1px dashed var(--accent);border-radius:4px;text-align:center;font-size:0.85rem;color:var(--text-muted);font-family:var(--font-body)}
-  .stripe-note strong{color:var(--accent);font-weight:600}
 
   /* Footer */
   .footer{background:var(--bg);border-top:1px solid var(--border);padding:var(--space-xl) 0 var(--space-md)}
@@ -147,17 +192,14 @@
   .footer-social a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-strong);color:var(--text-muted);transition:all 200ms cubic-bezier(0.22,1,0.36,1)}
   .footer-social a:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
   .footer-social svg{width:18px;height:18px}
-  .footer-credit a{color:var(--accent);border-bottom:1px solid var(--accent);transition:all 200ms cubic-bezier(0.22,1,0.36,1);padding-bottom:1px}
-  .footer-credit a:hover{color:var(--accent-bright);border-bottom-color:transparent}
+  .footer-credit a{color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px}
   .footer-credit a strong{font-weight:600}
 
-  /* WhatsApp float */
   .whatsapp-float{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.45);z-index:90;transition:transform 200ms cubic-bezier(0.22,1,0.36,1)}
   .whatsapp-float:hover{transform:scale(1.08)}
   .whatsapp-float svg{width:30px;height:30px}
   .whatsapp-float::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,0.4);animation:waPulse 2.4s ease-out infinite}
   @keyframes waPulse{0%{transform:scale(0.95);opacity:1}100%{transform:scale(1.4);opacity:0}}
-  @media(max-width:768px){.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px}.whatsapp-float svg{width:26px;height:26px}}
 
   ::selection{background:var(--accent);color:var(--bg)}
   .text-center{text-align:center}
@@ -183,175 +225,184 @@
     </div>
   </nav>
   <div class="mobile-menu">
-    <a href="index.html">Accueil</a>
-    <a href="portrait.html">Portrait</a>
-    <a href="oeuvres.html">Œuvres</a>
-    <a href="technique.html">Cire perdue</a>
-    <a href="stages.html">Stages · Fonderie</a>
-    <a href="medias.html">Médias</a>
-    <a href="contact.html">Contact</a>
-    <a href="boutique.html">Boutique</a>
-    <a href="en/boutique.html">EN · English</a>
+    <a href="index.html">Accueil</a><a href="portrait.html">Portrait</a><a href="oeuvres.html">Œuvres</a><a href="technique.html">Cire perdue</a><a href="stages.html">Stages · Fonderie</a><a href="medias.html">Médias</a><a href="contact.html">Contact</a><a href="boutique.html">Boutique</a><a href="en/boutique.html">EN · English</a>
   </div>
 
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="breadcrumb"><a href="index.html">Accueil</a> · Boutique</div>
-      <span class="eyebrow">Acquérir une œuvre</span>
-      <h1>Bronze, <em>pièce unique</em></h1>
-      <p>Chaque sculpture est coulée à la main selon la technique de la cire perdue. Une fois vendue, elle disparaît de la boutique. Paiement sécurisé Stripe, livraison dans le monde entier.</p>
+      <div class="breadcrumb"><a href="index.html">Accueil</a> · Le coffre</div>
+      <span class="eyebrow">Six pièces uniques</span>
+      <h1>Le <em>coffre</em></h1>
+      <p>Six bronzes, chacun unique. Une à une. Faites défiler horizontalement — utilisez la molette, les flèches du clavier, ou les boutons. Cliquez sur une œuvre pour l'acquérir.</p>
     </div>
   </header>
 
   <!-- Trust banner -->
   <div class="trust-banner">
     <div class="trust-row">
-      <div class="trust-item"><span class="dot"></span><span><strong>Paiement</strong> sécurisé via Stripe</span></div>
-      <div class="trust-item"><span class="dot"></span><span><strong>Livraison</strong> dans le monde entier</span></div>
-      <div class="trust-item"><span class="dot"></span><span><strong>Certificat</strong> d'authenticité signé</span></div>
+      <div class="trust-item"><span class="dot"></span><span><strong>Paiement</strong> sécurisé Stripe</span></div>
+      <div class="trust-item"><span class="dot"></span><span><strong>Livraison</strong> mondiale incluse</span></div>
+      <div class="trust-item"><span class="dot"></span><span><strong>Certificat</strong> signé</span></div>
       <div class="trust-item"><span class="dot"></span><span><strong>14 jours</strong> pour changer d'avis</span></div>
     </div>
   </div>
 
-  <!-- Sculptures à vendre -->
-  <section>
-    <div class="container">
-      <div style="text-align:center;margin-bottom:var(--space-xl)">
-        <span class="eyebrow">Sélection actuelle</span>
-        <h2 style="max-width:22ch;margin:0 auto var(--space-md)">Sculptures <em style="color:var(--accent);font-style:italic">disponibles</em></h2>
-        <p style="max-width:55ch;margin:0 auto">Six pièces sélectionnées par Firmin Sanou. Pour les autres œuvres de la galerie, contactez-nous directement.</p>
+  <!-- Nav latérale en chiffres romains (fixe pendant le scroll vault) -->
+  <nav class="vault-counter-fixed" id="vault-nav">
+    <a href="#piece-1" data-piece="0">I</a>
+    <a href="#piece-2" data-piece="1">II</a>
+    <a href="#piece-3" data-piece="2">III</a>
+    <a href="#piece-4" data-piece="3">IV</a>
+    <a href="#piece-5" data-piece="4">V</a>
+    <a href="#piece-6" data-piece="5">VI</a>
+  </nav>
+
+  <!-- LE COFFRE — chaque sculpture occupe sa propre scène -->
+  <section class="vault" id="vault">
+
+    <article class="vault-panel" id="piece-1">
+      <div class="vault-numeral">I</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/2010-La-Noblesse-45cm.jpg" alt="La Noblesse"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce I</span>
+        <h3>La <em>Noblesse</em></h3>
+        <p class="lead">Une silhouette dressée, le port haut. Cette figure exprime la dignité tranquille de celui qui sait ce qu'il porte — un nom, une lignée, un silence.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2010</span></div>
+          <div class="row"><strong>Hauteur</strong><span>45 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">1 200 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(0)">Acquérir cette pièce</button>
       </div>
+    </article>
 
-      <div class="shop-grid">
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/2010-La-Noblesse-45cm.jpg" alt="La Noblesse" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Portrait · 2010</span>
-            <h3 class="product-title">La Noblesse</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 45 cm</span>
-              <span><strong>Poids</strong> ~3 kg</span>
-              <span><strong>Matière</strong> Bronze</span>
-            </div>
-            <p class="product-desc">Buste doré coiffé d'un chapeau de cérémonie, anneaux et chaîne en bronze patiné.</p>
-            <div class="product-bottom">
-              <div class="product-price">1 200 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="la-noblesse">Acheter</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/2010-Le-Musicien-60cm-2.jpg" alt="Le Musicien" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Figure · 2010</span>
-            <h3 class="product-title">Le Musicien</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 60 cm</span>
-              <span><strong>Poids</strong> ~4,5 kg</span>
-              <span><strong>Matière</strong> Bronze</span>
-            </div>
-            <p class="product-desc">Harpe-luth africaine épurée, fileuse du ciel. La musique, dressée comme un arc.</p>
-            <div class="product-bottom">
-              <div class="product-price">1 800 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="le-musicien">Acheter</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/2012-Le-Penseur-30-cm.jpg" alt="Le Penseur" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Figure · 2012</span>
-            <h3 class="product-title">Le Penseur</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 30 cm</span>
-              <span><strong>Poids</strong> ~1,5 kg</span>
-              <span><strong>Matière</strong> Bronze doré</small></span>
-            </div>
-            <p class="product-desc">Figure dorée en position du penseur, suspendue dans la méditation.</p>
-            <div class="product-bottom">
-              <div class="product-price">700 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="le-penseur">Acheter</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/Le-Bagnard-2018.jpg" alt="Le Bagnard" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Figure · 2018</span>
-            <h3 class="product-title">Le Bagnard</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 35 cm</span>
-              <span><strong>Poids</strong> ~2 kg</span>
-              <span><strong>Matière</strong> Bronze noir</span>
-            </div>
-            <p class="product-desc">Bronze noir, méditation lourde. Le poids du temps incarné.</p>
-            <div class="product-bottom">
-              <div class="product-price">1 400 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="le-bagnard">Acheter</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg" alt="Les Lutteurs" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Groupe · 2017</span>
-            <h3 class="product-title">Les Lutteurs</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 40 cm</span>
-              <span><strong>Poids</strong> ~3 kg</span>
-              <span><strong>Matière</strong> Bronze</span>
-            </div>
-            <p class="product-desc">Étreinte agonistique, la sculpture du mouvement figé.</p>
-            <div class="product-bottom">
-              <div class="product-price">1 200 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="les-lutteurs">Acheter</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge unique">Pièce unique</span>
-            <img src="images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg" alt="La Femme dans toute sa Splendeur" loading="lazy">
-          </div>
-          <div class="product-info">
-            <span class="product-eyebrow">Figure · 2019</span>
-            <h3 class="product-title">La Femme dans toute sa Splendeur</h3>
-            <div class="product-meta">
-              <span><strong>Hauteur</strong> 55 cm</span>
-              <span><strong>Poids</strong> ~4 kg</span>
-              <span><strong>Matière</strong> Bronze</span>
-            </div>
-            <p class="product-desc">Hymne à la féminité et à la majesté. Femme au chapeau et sac à main, sourire mystérieux.</p>
-            <div class="product-bottom">
-              <div class="product-price">2 200 €<small>livraison incluse</small></div>
-              <a href="#" class="product-buy" data-product="la-femme-splendeur">Acheter</a>
-            </div>
-          </div>
-        </article>
+    <article class="vault-panel" id="piece-2">
+      <div class="vault-numeral">II</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/2010-Le-Musicien-60cm-2.jpg" alt="Le Musicien"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce II</span>
+        <h3>Le <em>Musicien</em></h3>
+        <p class="lead">Le corps épouse l'instrument. Dans la coulée du bronze, Firmin a figé l'instant où la musique habite encore l'homme — avant qu'elle ne s'envole.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2010</span></div>
+          <div class="row"><strong>Hauteur</strong><span>60 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">1 800 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(1)">Acquérir cette pièce</button>
       </div>
+    </article>
 
-    </div>
+    <article class="vault-panel" id="piece-3">
+      <div class="vault-numeral">III</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/2012-Le-Penseur-30-cm.jpg" alt="Le Penseur"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce III</span>
+        <h3>Le <em>Penseur</em></h3>
+        <p class="lead">Une pièce intime, à hauteur de main. La pensée s'incarne dans la matière — un bronze recueilli, conçu pour la table de chevet ou la bibliothèque.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2012</span></div>
+          <div class="row"><strong>Hauteur</strong><span>30 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">700 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(2)">Acquérir cette pièce</button>
+      </div>
+    </article>
+
+    <article class="vault-panel" id="piece-4">
+      <div class="vault-numeral">IV</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/Le-Bagnard-2018.jpg" alt="Le Bagnard"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce IV</span>
+        <h3>Le <em>Bagnard</em></h3>
+        <p class="lead">L'homme entravé, la chair lourde. Une œuvre frontale, sans détour, qui interroge la liberté et l'enfermement. Le bronze pèse autant que ce qu'il représente.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2018</span></div>
+          <div class="row"><strong>Hauteur</strong><span>35 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">1 400 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(3)">Acquérir cette pièce</button>
+      </div>
+    </article>
+
+    <article class="vault-panel" id="piece-5">
+      <div class="vault-numeral">V</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg" alt="Les Lutteurs"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce V</span>
+        <h3>Les <em>Lutteurs</em></h3>
+        <p class="lead">Deux corps en tension, soudés dans l'effort. Hommage aux luttes traditionnelles burkinabées, cette pièce vibre encore de la force du combat.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2017</span></div>
+          <div class="row"><strong>Hauteur</strong><span>40 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">1 200 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(4)">Acquérir cette pièce</button>
+      </div>
+    </article>
+
+    <article class="vault-panel" id="piece-6">
+      <div class="vault-numeral">VI</div>
+      <div class="vault-spot"></div>
+      <div class="vault-piece"><img src="images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg" alt="La Femme dans toute sa Splendeur"></div>
+      <div class="vault-meta">
+        <span class="num-label">Pièce VI</span>
+        <h3>La <em>Splendeur</em></h3>
+        <p class="lead">La pièce maîtresse du coffre. Une femme debout, en majesté, célébration de la dignité féminine. Bronze coulé en une seule pièce — une rareté technique.</p>
+        <div class="vault-meta-specs">
+          <div class="row"><strong>Année</strong><span>2019</span></div>
+          <div class="row"><strong>Hauteur</strong><span>55 cm</span></div>
+          <div class="row"><strong>Matière</strong><span>Bronze patiné, cire perdue</span></div>
+          <div class="row"><strong>Édition</strong><span>Pièce unique signée</span></div>
+        </div>
+        <div class="price-row">
+          <div><small>Prix d'acquisition</small><div class="price">2 200 €</div></div>
+        </div>
+        <button class="vault-acquire" onclick="openArt(5)">Acquérir cette pièce</button>
+      </div>
+    </article>
+
   </section>
+
+  <!-- Modal détail œuvre -->
+  <div class="art-modal" id="art-modal" onclick="if(event.target.id==='art-modal')closeArt()">
+    <div class="art-modal-content">
+      <button class="art-modal-close" onclick="closeArt()">×</button>
+      <div class="art-modal-image"><img id="am-img" src="" alt=""></div>
+      <div class="art-modal-info">
+        <div class="num" id="am-num"></div>
+        <h3 id="am-title"></h3>
+        <p class="description" id="am-desc"></p>
+        <dl class="art-modal-meta" id="am-meta"></dl>
+        <div class="art-modal-price"><span id="am-price"></span><small>livraison incluse</small></div>
+        <button class="art-modal-buy" onclick="buyArt()">Acquérir cette œuvre</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Commande personnalisée -->
   <section class="custom-order">
@@ -384,23 +435,19 @@
       <div class="faq-list">
         <div class="faq-item">
           <h4>Comment se passe la livraison ?</h4>
-          <p>Chaque sculpture est <strong>emballée à la main par Firmin</strong>, dans une caisse en bois renforcée. Expédition en colis suivi assuré dans le monde entier. Comptez <strong>2 à 4 semaines</strong> selon la destination (Europe plus rapide). Le prix de livraison est <strong>inclus dans le prix affiché</strong> pour la France métropolitaine et l'Europe.</p>
+          <p>Chaque sculpture est <strong>emballée à la main par Firmin</strong>, dans une caisse en bois renforcée. Expédition en colis suivi assuré dans le monde entier. Comptez <strong>2 à 4 semaines</strong>. Le prix de livraison est <strong>inclus</strong> pour la France métropolitaine et l'Europe.</p>
         </div>
         <div class="faq-item">
           <h4>Le paiement est-il sécurisé ?</h4>
-          <p>Le paiement passe par <strong>Stripe</strong>, leader mondial du paiement en ligne. Carte bancaire, Apple Pay, Google Pay acceptés. <strong>Aucune donnée bancaire</strong> n'est stockée sur le site. Possibilité de paiement en plusieurs fois pour les pièces au-delà de 1 000 €.</p>
+          <p>Le paiement passe par <strong>Stripe</strong>. Carte bancaire, Apple Pay, Google Pay acceptés. <strong>Aucune donnée bancaire</strong> n'est stockée sur le site. Paiement en plusieurs fois possible au-delà de 1 000 €.</p>
         </div>
         <div class="faq-item">
           <h4>Y a-t-il un certificat d'authenticité ?</h4>
-          <p>Oui. Chaque sculpture est livrée avec un <strong>certificat signé de la main de Firmin Sanou</strong>, mentionnant le titre, l'année, les dimensions, le matériau et un numéro de série. C'est la garantie que votre pièce est unique.</p>
+          <p>Oui. Chaque sculpture est livrée avec un <strong>certificat signé de la main de Firmin Sanou</strong>, mentionnant le titre, l'année, les dimensions, le matériau et un numéro de série.</p>
         </div>
         <div class="faq-item">
           <h4>Et si la sculpture ne me plaît pas ?</h4>
-          <p>Vous avez <strong>14 jours</strong> à compter de la réception pour changer d'avis. Renvoyez la pièce dans son emballage d'origine, vous êtes remboursé intégralement (hors frais de retour).</p>
-        </div>
-        <div class="faq-item">
-          <h4>Et la TVA / les douanes ?</h4>
-          <p>Pour la France et l'Union Européenne, le prix affiché est <strong>tout inclus</strong>. Pour les expéditions hors UE (USA, Canada, Suisse, etc.), des frais de douane locaux peuvent s'appliquer à la réception. Nous fournissons toutes les factures nécessaires pour le dédouanement.</p>
+          <p>Vous avez <strong>14 jours</strong> à compter de la réception pour changer d'avis. Renvoyez la pièce dans son emballage d'origine, vous êtes remboursé intégralement.</p>
         </div>
       </div>
     </div>
@@ -420,13 +467,13 @@
           </div>
         </div>
         <div><h5>Naviguer</h5><ul><li><a href="portrait.html">Portrait</a></li><li><a href="oeuvres.html">Œuvres</a></li><li><a href="technique.html">Cire perdue</a></li><li><a href="stages.html">Stages</a></li><li><a href="medias.html">Médias</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div><h5>Boutique</h5><ul><li><a href="boutique.html">Sculptures à vendre</a></li><li><a href="mailto:firminleonard.arts@gmail.com?subject=Commande%20personnalis%C3%A9e">Commande personnalisée</a></li><li><a href="https://www.afrikrea.com/" target="_blank" rel="noopener">Boutique Afrikrea</a></li></ul></div>
+        <div><h5>Boutique</h5><ul><li><a href="boutique.html">Sculptures à vendre</a></li><li><a href="mailto:firminleonard.arts@gmail.com?subject=Commande%20personnalis%C3%A9e">Commande personnalisée</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© <span id="year"></span> Firmin Sanou. Tous droits réservés.</span><span class="footer-credit">Site créé par <a href="https://amiro-dev.netlify.app" target="_blank" rel="noopener"><strong>Amir</strong>, dev freelance</a></span></div>
     </div>
   </footer>
 
-  <a href="https://wa.me/22676494334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contacter Firmin sur WhatsApp">
+  <a href="https://wa.me/22676494334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
   </a>
 
@@ -435,19 +482,65 @@
     function toggleMenu(){document.querySelector('.nav-toggle').classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open');document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('open')?'hidden':'';}
     document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',toggleMenu));
 
-    // Acheter buttons : pour l'instant ouvrent mailto, à remplacer par Stripe Payment Links
-    document.querySelectorAll('.product-buy').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const product = btn.dataset.product || '';
-        const card = btn.closest('.product-card');
-        const title = card.querySelector('.product-title')?.textContent || '';
-        const price = card.querySelector('.product-price')?.textContent.split('€')[0].trim() || '';
-        const subject = encodeURIComponent(`Acquisition : ${title}`);
-        const body = encodeURIComponent(`Bonjour,\n\nJe souhaite acquérir la sculpture "${title}" (${price} €).\n\nMerci de me faire suivre les modalités de paiement et de livraison.\n\nCordialement,`);
-        window.location.href = `mailto:firminleonard.arts@gmail.com?subject=${subject}&body=${body}`;
-      });
+    const ARTS = [
+      { num:'I', title:'La Noblesse', year:2010, height:'45 cm', weight:'~3 kg', material:'Bronze patiné doré', image:'images/oeuvres/2010-La-Noblesse-45cm.jpg', price:'1 200 €', desc:"Buste doré coiffé d'un chapeau de cérémonie, anneaux et chaîne en bronze patiné. Pièce unique signée." },
+      { num:'II', title:'Le Musicien', year:2010, height:'60 cm', weight:'~4,5 kg', material:'Bronze patiné', image:'images/oeuvres/2010-Le-Musicien-60cm-2.jpg', price:'1 800 €', desc:"Harpe-luth africaine épurée, fileuse du ciel. La musique, dressée comme un arc." },
+      { num:'III', title:'Le Penseur', year:2012, height:'30 cm', weight:'~1,5 kg', material:'Bronze doré', image:'images/oeuvres/2012-Le-Penseur-30-cm.jpg', price:'700 €', desc:"Figure dorée en position du penseur, suspendue dans la méditation." },
+      { num:'IV', title:'Le Bagnard', year:2018, height:'35 cm', weight:'~2 kg', material:'Bronze noir', image:'images/oeuvres/Le-Bagnard-2018.jpg', price:'1 400 €', desc:"Bronze noir, méditation lourde. Le poids du temps incarné." },
+      { num:'V', title:'Les Lutteurs', year:2017, height:'40 cm', weight:'~3 kg', material:'Bronze', image:'images/oeuvres/2017-Les-Lutteurs-40-cm-1.jpg', price:'1 200 €', desc:"Étreinte agonistique, la sculpture du mouvement figé." },
+      { num:'VI', title:'La Femme dans toute sa Splendeur', year:2019, height:'55 cm', weight:'~4 kg', material:'Bronze', image:'images/oeuvres/La-Femme-dans-toute-sa-Splendeur-2019.jpg', price:'2 200 €', desc:"Hymne à la féminité et à la majesté. Femme au chapeau et sac à main, sourire mystérieux." }
+    ];
+
+    let currentArt = 0;
+    function openArt(i){
+      currentArt = i;
+      const a = ARTS[i];
+      document.getElementById('am-img').src = a.image;
+      document.getElementById('am-img').alt = a.title;
+      document.getElementById('am-num').textContent = '— ' + a.num + ' —';
+      document.getElementById('am-title').textContent = a.title;
+      document.getElementById('am-desc').textContent = a.desc;
+      document.getElementById('am-price').textContent = a.price;
+      const meta = document.getElementById('am-meta');
+      meta.innerHTML =
+        `<dt>Année</dt><dd>${a.year}</dd>` +
+        `<dt>Hauteur</dt><dd>${a.height}</dd>` +
+        `<dt>Poids</dt><dd>${a.weight}</dd>` +
+        `<dt>Matière</dt><dd>${a.material}</dd>`;
+      document.getElementById('art-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeArt(){
+      document.getElementById('art-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function buyArt(){
+      const a = ARTS[currentArt];
+      const subject = encodeURIComponent('Acquisition : ' + a.title);
+      const body = encodeURIComponent('Bonjour,\n\nJe souhaite acquérir la sculpture "' + a.title + '" (' + a.price + ').\n\nMerci de me faire suivre les modalités de paiement et de livraison.\n\nCordialement,');
+      window.location.href = 'mailto:firminleonard.arts@gmail.com?subject=' + subject + '&body=' + body;
+    }
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeArt();
     });
+
+    // === Empêche le click sur le bouton "Acquérir" d'ouvrir 2x ===
+    document.querySelectorAll('.vault-acquire').forEach(b => b.addEventListener('click', e => e.stopPropagation()));
+
+    // === Scrollspy : surligne le chiffre romain de la pièce visible ===
+    const navLinks = document.querySelectorAll('.vault-counter-fixed a');
+    const panels = document.querySelectorAll('.vault-panel');
+    if(panels.length && 'IntersectionObserver' in window){
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if(en.isIntersecting){
+            const idx = Array.from(panels).indexOf(en.target);
+            navLinks.forEach(a => a.classList.toggle('active', parseInt(a.dataset.piece) === idx));
+          }
+        });
+      }, {threshold: 0.5});
+      panels.forEach(p => obs.observe(p));
+    }
   </script>
 </body>
 </html>
