@@ -5,9 +5,6 @@ backend:
   name: git-gateway
   branch: main
 
-# Si tu préfères des aperçus en cours d'édition
-publish_mode: editorial_workflow
-
 # Dossier où Decap stockera les images uploadées
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -18,8 +15,8 @@ locale: 'fr'
 # Logo affiché dans l'admin
 logo_url: /images/divers/portrait.jpg
 
-site_url: https://firminsanou.com
-display_url: https://firminsanou.com
+site_url: https://firmin-sanou.netlify.app
+display_url: https://firmin-sanou.netlify.app
 
 # ===========================================
 # COLLECTIONS — Les contenus que l'admin peut modifier
